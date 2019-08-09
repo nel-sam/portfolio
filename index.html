@@ -9,51 +9,92 @@
   <meta name="MSSmartTagsPreventParsing" content="true" />
   <meta name="description" content="Description" />
   <meta name="keywords" content="Keywords" />
-  <meta http-equiv="refresh" content="1" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <meta http-equiv="refresh" content="3" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Mono&display=swap" rel="stylesheet">
   <title>Nelson Samayoa - Software Developer</title>
 </head>
 
 <body>
   <main>
     <header>
+      <img src="mnts.svg" />
       <h2 id="name">Nelson Samayoa</h2>
+      <h4 id="title">software developer</h4>
     </header>
+
+    <section>
+      <article>
+        C#
+      </article>
+    </section>
 
   </main>
 
 </body>
 
 <style>
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media screen and (max-width: 480px) {
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+  * {
+    -webkit-animation-name: fadein;
+    -webkit-animation-duration: 1s;
+    animation-name: fadein;
+    animation-duration: 1s;
+  }
+
   body {
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  main {
+    width: 100%;
+
   }
 
   header {
+    overflow-x: hidden;
+    display: block;
+  }
+
+  img {
+    z-index: -1;
+    position: fixed;
     top: -200px;
-    height: 450px;
-    width: 100%;
-    position: absolute;
-    background-image: url("mnts.svg");
   }
 
   #name {
+    top: 130px;
+    left: 15px;
+    color: white;
+    position: absolute;
     font-family: 'Roboto Mono', monospace;
-    background-color: white;
-    position: absolute;
-    top: 200px;
-    right: 10px;
   }
 
-  @media (max-width: 480px) {
-    header {
-    top: -200px;
-    height: 450px;
-    width: 100%;
+  #title {
+    top: 155px;
+    left: 15px;
+    color: #dcdee6;
     position: absolute;
-    background-image: url("mnts.svg");
+    font-family: 'PT Sans', sans-serif;
   }
 
+  section {
+    display: block;
   }
 </style>
 
