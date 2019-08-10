@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: grey;
+    -webkit-transition: background-image 1s; /* Safari prior 6.1 */
+    transition: background-image 1s;
+    background-size: cover;
+    background-image: url('images/lago.jpg');
+}
+
+#name {
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav {
+    height: 100%;
+    width: 22rem;
+    padding: 3rem;
+    color: white;
+    background: rgba(119, 140, 163,0.5);
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+}
+
+nav > .link {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+nav > .link > span {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+
+#csharp {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+/* -webkit-animation-name: fadein;
+-webkit-animation-duration: 0.8s;
+animation-name: fadein;
+animation-duration: 0.8s; */
+@-webkit-keyframes fadein {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+}
+}
+
+@keyframes fadein {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+}
+}
+
+@media screen and (max-width: 720px) {
+
+}
+
