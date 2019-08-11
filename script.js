@@ -17,4 +17,16 @@ function display(id) {
             body.style.backgroundImage = "url('images/arizona.jpg')";
             break;
     }
+
+    const contentSections = document.getElementsByClassName('content-main');
+
+    for (var i = 0; i < contentSections.length; i++) {
+        contentSections.item(i).classList.add('hidden');
+        console.log(contentSections.item(i).id);
+        console.log(contentSections.item(i).classList);
+    }
+
+    document.getElementById(id).classList.remove('hidden');
+    console.log(id);
+    console.log(document.getElementById(id).classList);
 }

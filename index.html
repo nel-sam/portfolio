@@ -9,9 +9,9 @@
   <meta name="MSSmartTagsPreventParsing" content="true" />
   <meta name="description" content="Description" />
   <meta name="keywords" content="Keywords" />
-  <!-- <meta http-equiv="refresh" content="5" /> -->
+  <meta http-equiv="refresh" content="59" />
 
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>Nelson Samayoa - Software Developer</title>
@@ -20,28 +20,77 @@
 <body>
   <nav>
     <div class="link" onclick="display('home')">
-    <span class="title">Home<span class="arrow">→</span></span>
-    <span class="desc">about me</span>
-  </div>
-  <div class="link" onclick="display('csharp')">
-    <span class="title">C#<span class="arrow">→</span></span>
-    <span class="desc">my native language</span>
-  </div>
-  <div class="link" onclick="display('angular')">
+      <span class="title">Home<span class="arrow">→</span></span>
+      <span class="desc">about me</span>
+    </div>
+    <div class="link" onclick="display('csharp')">
+      <span class="title">C#<span class="arrow">→</span></span>
+      <span class="desc">my native language</span>
+    </div>
+    <div class="link" onclick="display('angular')">
       <span class="title">Angular<span class="arrow">→</span></span>
-    <span class="desc">my new found passion</span>
-  </div>
-  <div class="link" onclick="display('flutter')">
+      <span class="desc">my new found passion</span>
+    </div>
+    <div class="link" onclick="display('flutter')">
       <span class="title">Flutter<span class="arrow">→</span></span>
-    <span class="desc">the new addition</span>
-  </div>
+      <span class="desc">the new addition</span>
+    </div>
+    <div class="link" onclick="display('languages')">
+      <span class="title">Languages<span class="arrow">→</span></span>
+      <span class="desc">human ones</span>
+    </div>
   </nav>
   <main>
-    <section id="home">
+    <section class="content-main" id="home">
+      <div class="location-info-link" onclick="displayLocationInfo('gua')">
+        <span>About Guatemala</span>
+      </div>
+      <div class="content-article">
+        <div class="article-img">
+          <a>
+            <img src="images/circle.png" alt="Check out my linkedin profile" />
+          </a>
+        </div>
 
+        <article>
+          <h2>Nelson Samayoa</h2>
+          Professional software developer since 2010, graduate of Oregon State University...
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+          voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+          pariatur?
+        </article>
+      </div>
     </section>
-    <section id="csharp">
+    <section class="content-main" id="csharp">
+        <div class="location-info-link" onclick="displayLocationInfo('or')">
+            <span>About Oregon</span>
+          </div>
+        <div class="content-article">
+            <div class="article-img">
+                <a href="https://www.linkedin.com/in/nelsonsamayoa/" target="#">
+                  <img src="images/csharp.png" alt="Check out my linkedin profile" />
+                </a>
+              </div>
 
+            <article>
+              <h2>C#</h2>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+              amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+              aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+              voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+              pariatur?
+            </article>
+          </div>
     </section>
   </main>
 </body>

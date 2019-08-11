@@ -1,86 +1,128 @@
 :root {
-    --colors-background: rgba(119, 140, 163, 1.0);
-    --colors-background-trans: rgba(119, 140, 163,0.5);
-    --colors-header-text: white;
-    --colors-primary:
+  --colors-background: rgba(119, 140, 163, 1.0);
+  --colors-background-trans: rgba(119, 140, 163, 0.6);
+  --colors-header-text: white;
+  --colors-primary:
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-repeat: no-repeat;
 }
 
 body {
-    background-color: var(--colors-background);
-    background-size: cover;
-    background-image: url('images/lago.jpg');
-    transition: background-image 1s;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--colors-background);
+  background-size: cover;
+  background-image: url('images/lago.jpg');
+  transition: background-image 1s;
 }
 
 #name {
-    font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 @media screen and (min-width: 720px) {
-nav {
-    height: 100%;
-    width: 22rem;
-    padding: 3rem 0 3rem 3rem;
+  nav {
+    min-width: 22rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     color: var(--colors-header-text);
     font-family: 'Playfair Display', serif;
     background-color: var(--colors-background-trans);
-}
+  }
 
-nav > .link {
-    margin-top: 1rem;
+  nav>.link {
+    margin: 1.8rem 0 0 1.8rem;
     display: flex;
     flex-direction: column;
-}
+  }
 
-nav > .link > .title {
-    font-size: 4rem;
+  nav>.link>.title {
+    font-size: 2.5rem;
     transition: font-size 0.3s;
-}
+  }
 
-nav > .link:hover > .title {
-    font-size: 3.7rem;
-}
+  nav>.link:hover>.title {
+    font-size: 2.2rem;
+  }
 
-nav > .link > .title > .arrow {
+  nav>.link>.title>.arrow {
     position: relative;
     right: -2rem;
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 0;
     transition: opacity 1.3s;
-}
+  }
 
-nav > .link:hover > .title > .arrow {
+  nav>.link:hover>.title>.arrow {
     opacity: 1;
-}
+  }
 
-nav > .link > .desc {
-    font-size: 1.4rem;
+  nav>.link>.desc {
+    font-size: 1.2rem;
     padding-left: 2rem;
     transition: font-size 0.6s;
-}
+  }
 
-nav > .link:hover > .desc {
-    font-size: 1.8rem;
-}
+  nav>.link:hover>.desc {
+    font-size: 1.6rem;
+  }
 
-#csharp {
-    height: 100%;
-    width: 100%;
-}
+  .hidden {
+    opacity: 0;
+    display: none;
+  }
+
+  .content-main {
+    width: 85%;
+    animation: fadein 1s forwards;
+  }
+
+  .article-img {
+    height: 210px;
+  }
+
+  .article-img>a>img {
+    height: 200px;
+    transition: height 1s;
+  }
+
+  .article-img>a>img:hover {
+    height: 205px;
+  }
+
+  .location-info-link {
+    right: 0px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    position: absolute;
+    transition: font-size 1s;
+    color: var(--colors-header-text);
+    background-color: var(--colors-background-trans);
+  }
+
+  .location-info-link:hover {
+    font-size: 1.1rem;
+  }
+
+  .content-article {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--colors-header-text);
+    background-color: var(--colors-background-trans);
+  }
 }
 
 /* -webkit-animation-name: fadein;
@@ -88,30 +130,25 @@ nav > .link:hover > .desc {
 animation-name: fadein;
 animation-duration: 0.8s; */
 @-webkit-keyframes fadein {
-from {
+  from {
     opacity: 0;
-}
+  }
 
-to {
+  to {
     opacity: 1;
-}
+  }
 }
 
 @keyframes fadein {
-from {
+  from {
     opacity: 0;
-}
+  }
 
-to {
+  to {
     opacity: 1;
-}
-}
-
-@media screen and (min-width: 720px) {
-
+  }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {}
 
-}
-
+@media screen and (max-width: 720px) {}
