@@ -1,8 +1,9 @@
 :root {
-  --colors-background: rgba(119, 140, 163, 1.0);
-  --colors-background-trans: rgba(119, 140, 163, 0.6);
-  --colors-header-text: white;
-  --colors-primary:
+  --colors-background: white;
+  --colors-nav-bar-background: #f2f2f2;
+  --colors-header-text: black;
+  --colors-primary: grey;
+  --colors-text: black;
 }
 
 * {
@@ -15,7 +16,6 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  background-repeat: no-repeat;
 }
 
 body {
@@ -23,8 +23,12 @@ body {
   flex-direction: row;
   background-color: var(--colors-background);
   background-size: cover;
-  background-image: url('images/lago.jpg');
   transition: background-image 1s;
+}
+
+p {
+  line-height: 1.8rem;
+  margin: 2rem 0;
 }
 
 #name {
@@ -39,7 +43,8 @@ body {
     flex-direction: column;
     color: var(--colors-header-text);
     font-family: 'Playfair Display', serif;
-    background-color: var(--colors-background-trans);
+    box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+    background-image: linear-gradient(#f2f2f2, #f2f2f0);
   }
 
   nav>.link {
@@ -49,12 +54,12 @@ body {
   }
 
   nav>.link>.title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     transition: font-size 0.3s;
   }
 
   nav>.link:hover>.title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   nav>.link>.title>.arrow {
@@ -72,11 +77,6 @@ body {
   nav>.link>.desc {
     font-size: 1.2rem;
     padding-left: 2rem;
-    transition: font-size 0.6s;
-  }
-
-  nav>.link:hover>.desc {
-    font-size: 1.6rem;
   }
 
   .hidden {
@@ -108,8 +108,6 @@ body {
     font-size: 0.8rem;
     position: absolute;
     transition: font-size 1s;
-    color: var(--colors-header-text);
-    background-color: var(--colors-background-trans);
   }
 
   .location-info-link:hover {
@@ -120,8 +118,6 @@ body {
     margin: 3rem;
     padding: 1rem;
     font-size: 1.2rem;
-    color: var(--colors-header-text);
-    background-color: var(--colors-background-trans);
   }
 }
 
@@ -148,7 +144,3 @@ animation-duration: 0.8s; */
     opacity: 1;
   }
 }
-
-@media screen and (min-width: 720px) {}
-
-@media screen and (max-width: 720px) {}

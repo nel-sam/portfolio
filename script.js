@@ -5,16 +5,13 @@ function display(id) {
 
     switch (id) {
         case 'home':
-            body.style.backgroundImage = "url('images/lago.jpg')";
             break;
         case 'csharp':
-            body.style.backgroundImage = "url('images/oregon.jpg')";
             break;
         case 'angular':
-            body.style.backgroundImage = "url('images/japan.jpg')";
             break;
         case 'flutter':
-            body.style.backgroundImage = "url('images/arizona.jpg')";
+            //body.style.backgroundColor = "green";
             break;
     }
 
