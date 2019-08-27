@@ -64,33 +64,74 @@
           <p>
             I have to make an effort
             keep myself from having too many hobbies because there are so many things that interest me. This page
-            describes some of the main topics that make my life interesting (in addition than family and friends of course).
+            describes some of the main topics that make my life interesting (in addition than family and friends of
+            course).
           </p>
         </article>
       </div>
     </section>
     <section class="content-main" id="csharp">
-      <div class="location-info-link" onclick="displayLocationInfo('or')">
-        <span>About Oregon</span>
-      </div>
       <div class="content-article">
         <div class="article-img">
           <a href="https://www.linkedin.com/in/nelsonsamayoa/" target="#">
-            <img src="images/csharp.png" alt="Check out my linkedin profile" />
+            <img src="images/csharp.png" alt="Check out my Linkedin profile" />
           </a>
         </div>
 
         <article>
-          <h2>C#</h2>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-          voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-          pariatur?
+          <p>
+            I started learning C# in 2009 and in 2010 I started my internship at Intel in Oregon.
+            It was at Intel that I fell for C# and the .Net way of doing things. When I started my internship
+            most of my experience had been in C++, which is common for Computer Science students at Oregon's
+            universities.
+            C# and .Net just felt more <i>enterprise</i>, in a good way. It just felt like the right language and
+            tooling to use when you had to make software that absolutely worked and was maintainable. This sentiment
+            has gotten strong over the years and as I complete a decade as a C# developer I'm grateful to me from
+            the past for having chosen such a great language as my primary programming language. I feel like I've grown
+            alongside .Net and now .Net Core. I was there when WinForms was common, and WPF was still new. When WFC was
+            still king among enterprise and MVC was a new way of architecting a web app. I'll also still be there as
+            .Net Core
+            grows and matures to be an even better framework than it already is. Enough emotion, let's talk tech...
+          </p>
+          <h2>Web API</h2>
+          <p>
+
+            There's a lot to love about building API's in .Net, but among my favorites is the magic that happens at the
+            controller.
+            It's easy to take the ApiController base class for granted, but if you've ever made a NodeJS API you'll know
+            that .Net
+            takes care of a lot of tedium for you. I love that all you have to do is add an attribute to your controller
+            method
+            (HttpGet, HttpPost, HttpDelete, HttpPut, etc...) and the framework takes care of routing for you. You can,
+            of course,
+            customize the routing by supplying parameters into the previously mentioned attributes, but that's optional.
+            It's so nice
+            to then add Swagger on top to give your API a user-friendly interface, and so much of that is magical as
+            well. I love
+            opening up the startup.cs and whatever other startup/config files are in the API to peek at the what Auth
+            the API uses, what
+            dependency injection framework it's using, is CORS enabled, is it strict on JWT's, is it using JWT's at all?
+            All the cool stuff
+            is in the startup.cs and its friend files.
+          </p>
+          <h2>Entity Framework (and Linq)</h2>
+          <p>
+            Back in the my dark ages where I was building personal websites with PHP on the backend (very very long time ago),
+            I was getting and writing to and from my MySql databases uses hard-coded statements as strings right in my PHP code.
+            I'm glad I went through that because it helps me appreciate Entity Framework, and ORMs in general I suppose.
+            My first experience working with databases professionally was at my time at Dell Software. I'd just finished my 18 month
+            internship at Intel and was still very green. My team at Dell was awesome and introduced me to so many aspects of C# and .Net.
+            Entity and Linq are simply amazing and work so beautifully together. I love that I can setup Entity using the onModelCreating method
+            to rename columns to abstract from myself to sometimes really bad names people give to columns. Another really cool thing about the
+            onModelCreating method is that you can pre-populate your DB with dummy data! No need to have a separate SQL script for seeding data,
+            do it all in code using our favorite language, C#. After getting the data there's nothing better than calling FirstOrDefault(), or Select()
+            to convert all your data into DTO's, or calling Include() to fetch relational data. Such an exciting combination of .Net tools.
+          </p>
+          <h2>Dependency Injection (and Moq)</h2>
+          <p>
+
+          </p>
+
         </article>
       </div>
     </section>

@@ -1,9 +1,9 @@
 :root {
   --colors-background: white;
   --colors-nav-bar-background: #f2f2f2;
-  --colors-header-text: black;
+  --colors-header-text: rgb(51, 51, 51);
   --colors-primary: grey;
-  --colors-text: black;
+  --colors-text: rgb(51, 51, 51);
 }
 
 * {
@@ -28,7 +28,9 @@ body {
 
 p {
   line-height: 1.8rem;
-  margin: 2rem 0;
+  text-indent: 4rem;
+  margin: 1.5rem 0;
+  margin-bottom: 3rem;
 }
 
 #name {
@@ -37,6 +39,7 @@ p {
 
 @media screen and (min-width: 720px) {
   nav {
+    height: 100%;
     min-width: 22rem;
     cursor: pointer;
     display: flex;
@@ -56,6 +59,10 @@ p {
   nav>.link>.title {
     font-size: 2rem;
     transition: font-size 0.3s;
+  }
+
+  nav>.link:hover {
+    color: #01b3e1;
   }
 
   nav>.link:hover>.title {
@@ -95,11 +102,6 @@ p {
 
   .article-img>a>img {
     height: 200px;
-    transition: height 1s;
-  }
-
-  .article-img>a>img:hover {
-    height: 205px;
   }
 
   .location-info-link {
@@ -119,6 +121,7 @@ p {
     padding: 1rem;
     font-size: 1.2rem;
   }
+
 }
 
 /* -webkit-animation-name: fadein;
