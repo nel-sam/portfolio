@@ -129,7 +129,11 @@
           </p>
           <h2>Dependency Injection (and Moq)</h2>
           <p>
-
+            Unity was great to work with, but now .Net Core comes with dependency injection built-in. The benefits of using DI are obvious if you've
+            been developing for any decent amount of time, and I love that the mindset is such that DI should be there from the start of a project. When
+            working on a WebAPI, most of your registrations will look like this:
+            <p><code>services.AddScoped&lt;ICarpoolDetails, CarpoolDetails&gt;();</code></p>
+            So clean and simple, yet very customize and powerful if you need it to be.
           </p>
 
         </article>
