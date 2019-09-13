@@ -124,7 +124,6 @@ p {
 
   .content-article {
     margin: 1.8rem 3rem;
-    padding: 1rem;
     font-size: 1.2rem;
   }
 
@@ -132,12 +131,12 @@ p {
     #angular h2  {
       color: white;
     }
+
+    #csharp article {
+        padding-top: 1.7rem;
+    }
 }
 
-/* -webkit-animation-name: fadein;
--webkit-animation-duration: 0.8s;
-animation-name: fadein;
-animation-duration: 0.8s; */
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
