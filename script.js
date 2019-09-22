@@ -1,4 +1,4 @@
-display('home');
+display('developer');
 
 function display(id) {
     const body = document.getElementsByTagName("BODY")[0];

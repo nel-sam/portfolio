@@ -18,9 +18,9 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="nav-full">
     <div class="link" onclick="display('developer')">
-      <span class="title">The Software Developer<span class="arrow">→</span></span>
+      <span class="title">The Developer<span class="arrow">→</span></span>
       <span class="desc">about me as a dev</span>
     </div>
     <div class="link" onclick="display('language')">
@@ -32,12 +32,31 @@
       <span class="desc">My longest running passion</span>
     </div>
   </nav>
+
+  <div>
+    <nav class="nav-mobile">
+      <img id="mobile-menu-button" src="images/menu.png" />
+      <div class="link" onclick="display('developer')">
+        <span class="title">The Developer<span class="arrow">→</span></span>
+        <span class="desc">about me as a dev</span>
+      </div>
+      <div class="link" onclick="display('language')">
+        <span class="title">The Polyglot<span class="arrow">→</span></span>
+        <span class="desc">languages, my other hobby</span>
+      </div>
+      <div class="link" onclick="display('music')">
+        <span class="title">The Musician<span class="arrow">→</span></span>
+        <span class="desc">My longest running passion</span>
+      </div>
+    </nav>
+  </div>
+
   <main>
     <section class="content-main" id="developer">
       <div class="content-article">
         <div class="article-img">
           <a>
-            <img src="images/circle.png" alt="Check out my linkedin profile" />
+            <!-- <img src="images/circle.png" alt="Check out my linkedin profile" /> -->
           </a>
         </div>
 
@@ -127,6 +146,18 @@
       </div>
     </section>
     <section class="content-main" id="language">
+      <div class="content-article">
+        <div class="article-img">
+
+        </div>
+
+        <article>
+          <p></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-main" id="music">
       <div class="content-article">
         <div class="article-img">
 
