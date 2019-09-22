@@ -19,29 +19,21 @@
 
 <body>
   <nav>
-    <div class="link" onclick="display('home')">
-      <span class="title">Home<span class="arrow">→</span></span>
-      <span class="desc">about me</span>
+    <div class="link" onclick="display('developer')">
+      <span class="title">The Software Developer<span class="arrow">→</span></span>
+      <span class="desc">about me as a dev</span>
     </div>
-    <div class="link" onclick="display('csharp')">
-      <span class="title">C#<span class="arrow">→</span></span>
-      <span class="desc">my native language</span>
+    <div class="link" onclick="display('language')">
+      <span class="title">The Polyglot<span class="arrow">→</span></span>
+      <span class="desc">languages, my other hobby</span>
     </div>
-    <div class="link" onclick="display('angular')">
-      <span class="title">Angular<span class="arrow">→</span></span>
-      <span class="desc">my new found passion</span>
-    </div>
-    <div class="link" onclick="display('flutter')">
-      <span class="title">Flutter<span class="arrow">→</span></span>
-      <span class="desc">the new addition</span>
-    </div>
-    <div class="link" onclick="display('languages')">
-      <span class="title">Languages<span class="arrow">→</span></span>
-      <span class="desc">human ones</span>
+    <div class="link" onclick="display('music')">
+      <span class="title">The Musician<span class="arrow">→</span></span>
+      <span class="desc">My longest running passion</span>
     </div>
   </nav>
   <main>
-    <section class="content-main" id="home">
+    <section class="content-main" id="developer">
       <div class="content-article">
         <div class="article-img">
           <a>
@@ -67,18 +59,13 @@
             describes some of the main topics that make my life interesting (in addition than family and friends of
             course). This site is just a little introduction to myself and made in super simple HTML+CSS+JavaScript, which is nice to do sometimes.
           </p>
-        </article>
-      </div>
-    </section>
-    <section class="content-main" id="csharp">
-      <div class="content-article">
-        <div class="article-img">
-          <a href="https://www.linkedin.com/in/nelsonsamayoa/" target="#">
-            <img src="images/csharp.png" alt="Check out my Linkedin profile" />
-          </a>
-        </div>
 
-        <article>
+          <div id="tech-cards">
+            <div><img src="images/csharp.png" alt="Check out my Linkedin profile" /></div>
+            <div><img src="images/angular.png" alt="Check out my Linkedin profile" /></div>
+            <div><img src="images/flutter.jpg" alt="Check out my Linkedin profile" /></div>
+          </div>
+
           <p>
             I started learning C# in 2009 and in 2010 I started my internship at Intel in Oregon.
             It was at Intel that I fell for C# and the .Net way of doing things. When I started my internship
@@ -135,25 +122,21 @@
             <p><code>services.AddScoped&lt;ICarpoolDetails, CarpoolDetails&gt;();</code></p>
             So clean and simple, yet very customize and powerful if you need it to be.
           </p>
+
         </article>
       </div>
     </section>
+    <section class="content-main" id="language">
+      <div class="content-article">
+        <div class="article-img">
 
-    <section class="content-main" id="angular">
-        <div class="content-article">
-          <div class="article-img">
-            <a>
-              <img src="images/angular.png"/>
-            </a>
-          </div>
-
-          <article>
-            <h2>Angular Framework</h2>
-            <p>My real first introduction to JavaScript was jQuery back in 2008.........................
-            </p>
-          </article>
         </div>
-      </section>
+
+        <article>
+          <p></p>
+        </article>
+      </div>
+    </section>
 
   </main>
 </body>

@@ -4,13 +4,11 @@ function display(id) {
     const body = document.getElementsByTagName("BODY")[0];
 
     switch (id) {
-        case 'home':
+        case 'developer':
             break;
-        case 'csharp':
+        case 'language':
             break;
-        case 'angular':
-            break;
-        case 'flutter':
+        case 'music':
             //body.style.backgroundColor = "green";
             break;
     }
