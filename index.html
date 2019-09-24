@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <nav class="nav-full">
+  <!-- <nav class="nav-full">
     <div class="link" onclick="display('developer')">
       <span class="title">The Developer<span class="arrow">→</span></span>
       <span class="desc">about me as a dev</span>
@@ -31,11 +31,13 @@
       <span class="title">The Musician<span class="arrow">→</span></span>
       <span class="desc">My longest running passion</span>
     </div>
-  </nav>
+  </nav> -->
 
   <div>
-    <nav class="nav-mobile">
+    <div id="mobile-menu-button-container">
       <img id="mobile-menu-button" src="images/menu.png" />
+    </div>
+    <nav id="nav-menu" class="hidden">
       <div class="link" onclick="display('developer')">
         <span class="title">The Developer<span class="arrow">→</span></span>
         <span class="desc">about me as a dev</span>
@@ -54,9 +56,9 @@
   <main>
     <section class="content-main" id="developer">
       <div class="content-article">
-        <div class="article-img">
+        <div id="self-img" class="article-img">
           <a>
-            <!-- <img src="images/circle.png" alt="Check out my linkedin profile" /> -->
+            <img src="images/circle.png" alt="Check out my linkedin profile" />
           </a>
         </div>
 
@@ -76,7 +78,8 @@
             I have to make an effort
             keep myself from having too many hobbies because there are so many things that interest me. This page
             describes some of the main topics that make my life interesting (in addition than family and friends of
-            course). This site is just a little introduction to myself and made in super simple HTML+CSS+JavaScript, which is nice to do sometimes.
+            course). This site is just a little introduction to myself and made in super simple HTML+CSS+JavaScript,
+            which is nice to do sometimes.
           </p>
 
           <div id="tech-cards">
@@ -122,21 +125,32 @@
           </p>
           <h2>Entity Framework (and Linq)</h2>
           <p>
-            Back in the my dark ages where I was building personal websites with PHP on the backend (very very long time ago),
-            I was getting and writing to and from my MySql databases uses hard-coded statements as strings right in my PHP code.
+            Back in the my dark ages where I was building personal websites with PHP on the backend (very very long time
+            ago),
+            I was getting and writing to and from my MySql databases uses hard-coded statements as strings right in my
+            PHP code.
             I'm glad I went through that because it helps me appreciate Entity Framework, and ORMs in general I suppose.
-            My first experience working with databases professionally was at my time at Dell Software. I'd just finished my 18 month
-            internship at Intel and was still very green. My team at Dell was awesome and introduced me to so many aspects of C# and .Net.
-            Entity and Linq are simply amazing and work so beautifully together. I love that I can setup Entity using the onModelCreating method
-            to rename columns to abstract from myself to sometimes really bad names people give to columns. Another really cool thing about the
-            onModelCreating method is that you can pre-populate your DB with dummy data! No need to have a separate SQL script for seeding data,
-            do it all in code using our favorite language, C#. After getting the data there's nothing better than calling FirstOrDefault(), or Select()
-            to convert all your data into DTO's, or calling Include() to fetch relational data. Such an exciting combination of .Net tools.
+            My first experience working with databases professionally was at my time at Dell Software. I'd just finished
+            my 18 month
+            internship at Intel and was still very green. My team at Dell was awesome and introduced me to so many
+            aspects of C# and .Net.
+            Entity and Linq are simply amazing and work so beautifully together. I love that I can setup Entity using
+            the onModelCreating method
+            to rename columns to abstract from myself to sometimes really bad names people give to columns. Another
+            really cool thing about the
+            onModelCreating method is that you can pre-populate your DB with dummy data! No need to have a separate SQL
+            script for seeding data,
+            do it all in code using our favorite language, C#. After getting the data there's nothing better than
+            calling FirstOrDefault(), or Select()
+            to convert all your data into DTO's, or calling Include() to fetch relational data. Such an exciting
+            combination of .Net tools.
           </p>
           <h2>Dependency Injection (and Moq)</h2>
           <p>
-            Unity was great to work with, but now .Net Core comes with dependency injection built-in. The benefits of using DI are obvious if you've
-            been developing for any decent amount of time, and I love that the mindset is such that DI should be there from the start of a project. When
+            Unity was great to work with, but now .Net Core comes with dependency injection built-in. The benefits of
+            using DI are obvious if you've
+            been developing for any decent amount of time, and I love that the mindset is such that DI should be there
+            from the start of a project. When
             working on a WebAPI, most of your registrations will look like this:
             <p><code>services.AddScoped&lt;ICarpoolDetails, CarpoolDetails&gt;();</code></p>
             So clean and simple, yet very customize and powerful if you need it to be.

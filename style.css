@@ -13,13 +13,20 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
+article {
+  line-height: 1.4rem;
+}
+
 nav {
-  min-width: 22rem;
+  animation: fadein 1s linear;
+  /* min-width: 22rem; */
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -73,30 +80,39 @@ main {
   animation: fadein 1s forwards;
 }
 
+#tech-cards>div {
+  background-image: url('images/banner.jpg');
+}
+
 #tech-cards>div>img {
   height: 250px;
   width: 250px;
 }
 
-.nav-full { background: red;}
-
 @media only screen and (min-width: 520px){
-  .nav-full {
-    display: block !important;
-  }
-
-  .nav-mobile {
-    display: none;
+  #nav-menu {
+    background: red;
   }
 }
 
 @media only screen and (max-width: 520px) {
-  .nav-full {
-    display: none;
+  #mobile-menu-button-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 0.3rem;
   }
 
-  .nav-mobile {
-    display: block !important;
+  #mobile-menu-button {
+
+  }
+
+  #nav-menu {
+    padding-bottom: 2rem;
+  }
+
+  #self-img {
+    display: flex;
+    justify-content: center;
   }
 }
 
