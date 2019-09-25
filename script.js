@@ -22,16 +22,13 @@ function display(id) {
     document.getElementById(id).classList.remove('hidden');
 }
 
-let mobileMenuButtonOpen = false;
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-mobileMenuButton.addEventListener('click', () => {
-    const navMobile = document.getElementById('nav-menu');
+document.getElementById('mobile-menu-button')
+.addEventListener('click', () => {
+    const menu = document.getElementById('nav-menu');
 
-    if (mobileMenuButtonOpen) {
-        navMobile.classList.add('hidden');
-        mobileMenuButtonOpen = false;
+    if (!menu.style.display || menu.style.display === 'none') {
+        menu.style.display = 'inherit';
     } else {
-        navMobile.classList.remove('hidden');
-        mobileMenuButtonOpen = true;
+        menu.style.display = 'none';
     }
 });
