@@ -68,7 +68,28 @@ a:hover {
   min-width: 16rem;
 }
 
-@media screen and (min-width: 520px) {
+.work-section .work-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-section .work-info img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.work-section .work-info-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.city {
+  color: grey;
+}
+
+@media screen and (min-width: 600px) {
   body {
     padding: 1rem;
   }
@@ -85,6 +106,7 @@ a:hover {
 
    .education-line {
     display: flex;
+    flex-direction: row;
   }
 
   .education-line strong {
@@ -94,5 +116,31 @@ a:hover {
   .summary-block {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  article {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .work-section {
+    display: flex;
+  }
+
+  .work-section .work-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 11rem;
+  }
+
+  .work-section .work-info img {
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .work-summary {
+    border-left: 1px solid grey;
+    padding-left: 1rem;
   }
 }
