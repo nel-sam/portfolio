@@ -1,0 +1,162 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta name="description" content="Description" />
+  <meta name="keywords" content="Keywords" />
+  <!-- <meta http-equiv="refresh" content="59" /> -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Nelson Samayoa - Software Developer</title>
+</head>
+
+<body>
+  <nav>
+    <div class="link" onclick="display('home')">
+      <span class="title">Home<span class="arrow">→</span></span>
+      <span class="desc">about me</span>
+    </div>
+    <div class="link" onclick="display('csharp')">
+      <span class="title">C#<span class="arrow">→</span></span>
+      <span class="desc">my native language</span>
+    </div>
+    <div class="link" onclick="display('angular')">
+      <span class="title">Angular<span class="arrow">→</span></span>
+      <span class="desc">my new found passion</span>
+    </div>
+    <div class="link" onclick="display('flutter')">
+      <span class="title">Flutter<span class="arrow">→</span></span>
+      <span class="desc">the new addition</span>
+    </div>
+    <div class="link" onclick="display('languages')">
+      <span class="title">Languages<span class="arrow">→</span></span>
+      <span class="desc">human ones</span>
+    </div>
+  </nav>
+  <main>
+    <section class="content-main" id="home">
+      <div class="content-article">
+        <div class="article-img">
+          <a>
+            <img src="images/circle.png" alt="Check out my linkedin profile" />
+          </a>
+        </div>
+
+        <article>
+          <h2>Nelson Samayoa</h2>
+          <p>Professional software developer since 2010, graduate of Oregon State University.
+            My original real passion in life is language learning. I don't mean linguistics specifically, although that
+            does of course
+            interest me as well. I mean literally learning languages for fun. To most people it's a chore to be avoided
+            but for me it's how
+            I relax. The feeling of being able to decipher something that only a few hours ago was completely
+            meaningless is a feeling I'm probably
+            addicted to. Fortunately for me, this natural drive helps me a lot as a software developer because ideally
+            every day is a day in which
+            I come to understand something that I did not understand when I woke up that morning.</p>
+          <p>
+            I have to make an effort
+            keep myself from having too many hobbies because there are so many things that interest me. This page
+            describes some of the main topics that make my life interesting (in addition than family and friends of
+            course). This site is just a little introduction to myself and made in super simple HTML+CSS+JavaScript, which is nice to do sometimes.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="content-main" id="csharp">
+      <div class="content-article">
+        <div class="article-img">
+          <a href="https://www.linkedin.com/in/nelsonsamayoa/" target="#">
+            <img src="images/csharp.png" alt="Check out my Linkedin profile" />
+          </a>
+        </div>
+
+        <article>
+          <p>
+            I started learning C# in 2009 and in 2010 I started my internship at Intel in Oregon.
+            It was at Intel that I fell for C# and the .Net way of doing things. When I started my internship
+            most of my experience had been in C++, which is common for Computer Science students at Oregon's
+            universities.
+            C# and .Net just felt more <i>enterprise</i>, in a good way. It just felt like the right language and
+            tooling to use when you had to make software that absolutely worked and was maintainable. This sentiment
+            has gotten strong over the years and as I complete a decade as a C# developer I'm grateful to me from
+            the past for having chosen such a great language as my primary programming language. I feel like I've grown
+            alongside .Net and now .Net Core. I was there when WinForms was common, and WPF was still new. When WFC was
+            still king among enterprise and MVC was a new way of architecting a web app. I'll also still be there as
+            .Net Core
+            grows and matures to be an even better framework than it already is. Enough emotion, let's talk tech...
+          </p>
+          <h2>Web API</h2>
+          <p>
+
+            There's a lot to love about building API's in .Net, but among my favorites is the magic that happens at the
+            controller.
+            It's easy to take the ApiController base class for granted, but if you've ever made a NodeJS API you'll know
+            that .Net
+            takes care of a lot of tedium for you. I love that all you have to do is add an attribute to your controller
+            method
+            (HttpGet, HttpPost, HttpDelete, HttpPut, etc...) and the framework takes care of routing for you. You can,
+            of course,
+            customize the routing by supplying parameters into the previously mentioned attributes, but that's optional.
+            It's so nice
+            to then add Swagger on top to give your API a user-friendly interface, and so much of that is magical as
+            well. I love
+            opening up the startup.cs and whatever other startup/config files are in the API to peek at the what Auth
+            the API uses, what
+            dependency injection framework it's using, is CORS enabled, is it strict on JWT's, is it using JWT's at all?
+            All the cool stuff
+            is in the startup.cs and its friend files.
+          </p>
+          <h2>Entity Framework (and Linq)</h2>
+          <p>
+            Back in the my dark ages where I was building personal websites with PHP on the backend (very very long time ago),
+            I was getting and writing to and from my MySql databases uses hard-coded statements as strings right in my PHP code.
+            I'm glad I went through that because it helps me appreciate Entity Framework, and ORMs in general I suppose.
+            My first experience working with databases professionally was at my time at Dell Software. I'd just finished my 18 month
+            internship at Intel and was still very green. My team at Dell was awesome and introduced me to so many aspects of C# and .Net.
+            Entity and Linq are simply amazing and work so beautifully together. I love that I can setup Entity using the onModelCreating method
+            to rename columns to abstract from myself to sometimes really bad names people give to columns. Another really cool thing about the
+            onModelCreating method is that you can pre-populate your DB with dummy data! No need to have a separate SQL script for seeding data,
+            do it all in code using our favorite language, C#. After getting the data there's nothing better than calling FirstOrDefault(), or Select()
+            to convert all your data into DTO's, or calling Include() to fetch relational data. Such an exciting combination of .Net tools.
+          </p>
+          <h2>Dependency Injection (and Moq)</h2>
+          <p>
+            Unity was great to work with, but now .Net Core comes with dependency injection built-in. The benefits of using DI are obvious if you've
+            been developing for any decent amount of time, and I love that the mindset is such that DI should be there from the start of a project. When
+            working on a WebAPI, most of your registrations will look like this:
+            <p><code>services.AddScoped&lt;ICarpoolDetails, CarpoolDetails&gt;();</code></p>
+            So clean and simple, yet very customize and powerful if you need it to be.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-main" id="angular">
+        <div class="content-article">
+          <div class="article-img">
+            <a>
+              <img src="images/angular.png"/>
+            </a>
+          </div>
+
+          <article>
+            <h2>Angular Framework</h2>
+            <p>My real first introduction to JavaScript was jQuery back in 2008.........................
+            </p>
+          </article>
+        </div>
+      </section>
+
+  </main>
+</body>
+<script src="script.js"></script>
+
+</html>
