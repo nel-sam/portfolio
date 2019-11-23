@@ -4,6 +4,8 @@
 html {
   box-sizing: inherit;
   /* font-size: 2vw; */
+  max-width: 60rem; /* TODO: Move into breakpoint */
+  padding:1rem;
 }
 
 .name-container {
@@ -13,6 +15,7 @@ html {
 .name-container .name {
   margin: 0;
   padding: 0;
+  font-size: 3rem;
 }
 
 .name-container span {
@@ -21,6 +24,8 @@ html {
 
 .circle-container img {
   width: 100%;
+  max-width: 12rem;
+  max-height: 12rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -68,6 +73,15 @@ a:hover {
   min-width: 16rem;
 }
 
+article {
+  line-height: 1.5rem;
+}
+
+.work-section {
+  margin: 2rem 0;
+  border-bottom: 1px solid grey;
+}
+
 .work-section .work-info {
   display: flex;
   flex-direction: row;
@@ -92,6 +106,7 @@ a:hover {
 @media screen and (min-width: 600px) {
   body {
     padding: 1rem;
+    align-self: center;
   }
 
   header {
@@ -100,8 +115,8 @@ a:hover {
    }
 
    .circle-container img {
-    height: 14rem;
-    width: 14rem;
+    height: 10rem;
+    width: 10rem;
   }
 
    .education-line {
@@ -119,11 +134,16 @@ a:hover {
   }
 
   article {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
+  article h2{
+    margin-top: 4rem;
+   }
+
   .work-section {
+    border-bottom: 0px;
     display: flex;
   }
 
