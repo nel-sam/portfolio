@@ -3,9 +3,14 @@
 *, *::before, *::after { box-sizing: border-box; }
 html {
   box-sizing: inherit;
-  /* font-size: 2vw; */
-  max-width: 60rem; /* TODO: Move into breakpoint */
-  padding:1rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .name-container {
@@ -16,6 +21,7 @@ html {
   margin: 0;
   padding: 0;
   font-size: 3rem;
+  color: #118ab2;
 }
 
 .name-container span {
@@ -32,6 +38,12 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  max-width: 60rem;
 }
 
 /* unvisited link */
@@ -83,7 +95,6 @@ article {
 
 .work-section {
   margin: 2rem 0;
-  border-bottom: 1px solid grey;
 }
 
 .work-section .work-info {
@@ -92,8 +103,8 @@ article {
 }
 
 .work-section .work-info img {
-  height: 3rem;
-  width: 3rem;
+  height: 8rem;
+  width: 8rem;
   margin-right: 1rem;
 }
 
@@ -107,13 +118,38 @@ article {
   color: rgb(62, 60, 60);
 }
 
-@media screen and (min-width: 600px) {
+.page-footer {
+  background-color: #118ab2;
+  color: white;
+  font-size: larger;
+  height: 5rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
   body {
-    padding: 1rem;
     align-self: center;
   }
 
-  header {
+  main {
+    padding: 1.75rem;
+  }
+
+  .work-summary {
+    border-bottom: 1px solid grey;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    align-self: center;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .page-header {
     display: flex;
     justify-content: space-between;
    }
@@ -147,7 +183,7 @@ article {
    }
 
   .work-section {
-    border-bottom: 0px;
+    top: 0;
     display: flex;
   }
 
