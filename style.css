@@ -28,6 +28,10 @@ ul {
   top: -1rem;
 }
 
+.name-container .job-title {
+  font-size: 1.5rem;
+}
+
 .circle-container img {
   width: 100%;
   max-width: 12rem;
