@@ -7,6 +7,25 @@ html {
   padding: 0;
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-link {
+  left: -100%;
+  position: absolute;
+}
+
+.skip-link:focus {
+  left: 50%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -126,7 +145,7 @@ article {
   background-color: #118ab2;
   color: white;
   font-size: larger;
-  height: 5rem;
+  min-height: 5rem;
   padding: 2rem;
 }
 
