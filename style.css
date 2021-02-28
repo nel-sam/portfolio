@@ -2,9 +2,22 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html {
+  /* WCAG Level AA 1.4.12 states that users must be able
+  to override the following 4 CSS properties to at least the
+  values set below. I went ahead and just designed the site to
+  these values because I find it helps me read it as well */
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.12rem;
+  word-spacing: .16rem;
+
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+p + p {
+  margin-top: 2rem;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -40,6 +53,7 @@ ul {
   margin: 0;
   padding: 0;
   font-size: 3rem;
+  line-height: 3.5rem;
   color: #118ab2;
 }
 
@@ -61,8 +75,8 @@ ul {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 main {
