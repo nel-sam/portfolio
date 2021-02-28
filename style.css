@@ -37,6 +37,7 @@ p + p {
 
 .skip-link:focus {
   left: 50%;
+  top: 0rem;
 }
 
 ul {
