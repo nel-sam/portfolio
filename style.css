@@ -42,6 +42,7 @@ section>h2 {
 
 article {
   margin: 1rem 0 2rem 0;
+  color:rgb(62, 60, 60);
 }
 
 button {
@@ -114,6 +115,39 @@ main {
   color: white;
 }
 
+.centered-text {
+  text-align: center;
+}
+
+.badge-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.badge {
+  margin: 1rem;
+  min-height: 4rem;
+  min-width: 4rem;
+  max-height: 4rem;
+  max-width: 4rem;
+  border-radius: 30%;
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+.badge img {
+  margin-top: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: -0.25rem;
+  filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(62deg) brightness(99%) contrast(105%);
+}
+
+.badge span {
+  font-size: 0.75rem;
+}
+
 a:visited, a:link {
   text-decoration: none;
 }
@@ -138,17 +172,15 @@ nav {
 
 nav>span>ul {
   margin-top: 1rem;
-}
-
-nav>span>ul>il {
-  margin-right: 2rem;
-}
-
-nav {
+  display: flex;
   flex-direction: row;
 }
 
-nav>span>ul>il>a:hover {
+nav>span>ul>li {
+  margin-right: 2rem;
+}
+
+nav>span>ul>li>a:hover {
   color: var(--primary-color);
 }
 
