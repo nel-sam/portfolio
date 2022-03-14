@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Karla&display=swap');
 
+:root {
+  --primary-color: #e31b6d;
+  --secondary-color: #04c2c9;
+  --bg-dark: #1b242f;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 html {
   /* WCAG Level AA 1.4.12 states that users must be able
@@ -30,6 +36,26 @@ p + p {
   width: 1px;
 }
 
+section>h2 {
+  padding-top: 8rem;
+}
+
+article {
+  margin: 1rem 0 2rem 0;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  padding: 0.75rem;
+  box-shadow: 4px 2px 2px lightgray;
+  background-color: white;
+}
+
+ button a {
+  color: var(--primary-color)
+ }
+
 .skip-link {
   left: -100%;
   position: absolute;
@@ -55,7 +81,7 @@ ul {
   padding: 0;
   font-size: 3rem;
   line-height: 3.5rem;
-  color: #118ab2;
+  color: var(--primary-color);
 }
 
 .name-container span {
@@ -84,20 +110,55 @@ main {
   max-width: 60rem;
 }
 
-/* unvisited link */
-a:link {
-  color: black;
+.page-title {
+  color: white;
+}
+
+a:visited, a:link {
   text-decoration: none;
 }
 
-/* visited link */
-a:visited {
-  color: grey;
+a {
+  color: var(--secondary-color);
 }
 
-/* mouse over link */
 a:hover {
-  color: blue;
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: var(--bg-dark);
+  padding: 1rem;
+  border-bottom: 3px solid var(--secondary-color);
+  position: fixed;
+  top: 0;
+  width: 100%
+
+}
+
+nav>span>ul {
+  margin-top: 1rem;
+}
+
+nav>span>ul>il {
+  margin-right: 2rem;
+}
+
+nav {
+  flex-direction: row;
+}
+
+nav>span>ul>il>a:hover {
+  color: var(--primary-color);
+}
+
+nav a:visited, nav a:link {
+  color: white;
+}
+
+#active-link {
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .contact-link {
@@ -157,7 +218,7 @@ article {
 }
 
 .page-footer {
-  background-color: #118ab2;
+  background-color: var(--bg-dark);
   color: white;
   font-size: larger;
   min-height: 5rem;
