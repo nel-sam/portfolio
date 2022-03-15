@@ -23,17 +23,22 @@
     </span>
     <span>
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="#bio">BIO</a></li>
-        <li><a href="#my-apps">MY APPS</a></li>
-        <li><a href="resume.html">MY RESUMÉ</a></li>
+        <li><a id="home-link" class="active-link" onclick="setActiveLink('home-link')" href="index.html">HOME</a></li>
+        <li><a id="bio-link" onclick="setActiveLink('bio-link')" href="#bio">BIO</a></li>
+        <li><a id="my-apps-link" onclick="setActiveLink('my-apps-link')" href="#my-apps">MY APPS</a></li>
+        <li><a id="resume-link" onclick="setActiveLink('resume-link')" href="resume.html">MY RESUMÉ</a></li>
       </ul>
     </span>
 
   </nav>
+  <section id="home">
+    <div class="banner">
+      <img id="home-header" class="clear-nav" src="./images/laptop.jpg" />
+    </div>
+  </section>
   <main>
     <section id="bio">
-      <h2>Bio</h2>
+      <h2 id="bio-header">Bio</h2>
       <article>
         <ul class="badge-container">
           <li class="badge">
@@ -74,9 +79,9 @@
       </article>
     </section>
     <section id="my-apps">
-      <h2>My Apps</h2>
+      <h2 id="my-apps-header">My Apps</h2>
       <h3>Navika</h3>
-      <img src="./images/navika.png" />
+      <img class="app-image" src="./images/navika.png" />
       <article>Navika is my most developed app and it's main goal is to get users familiarized with the difficult grammar points
         of the Serbo-Croation family, which includes Croatian, Serbian, Bosnian, and Montenegrin. Users can practice concepts such as
         declension, verb conjugations, cyrillic, and more.
@@ -93,7 +98,7 @@
       </button>
 
       <h3>HanDrills</h3>
-      <img src="./images/handrills.png" />
+      <img class="app-image" src="./images/handrills.png" />
       <article>
         HanDrills is a spin-off of Navika, and it's aim is the familiarize the user with the most difficults grammar points of the Korean
         language. Users can practice difficult concepts such as using native and sino korean numbers, verb conjugations, indirect quoting,
@@ -114,8 +119,8 @@
     <span class="page-title">
       Nelson Samayoa | Software Developer
     </span>
-    <p><a href="no-collection-policy.html">Privacy Policy</a></p>
-    <p><a href="sitemap.xml">Site Map</a></p>
+    <div><a href="no-collection-policy.html">Privacy Policy</a></div>
+    <div><a href="sitemap.xml">Site Map</a></div>
   </footer>
 </body>
 <script src="./scripts/script.js"></script>

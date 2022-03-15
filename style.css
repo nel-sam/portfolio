@@ -36,16 +36,14 @@ p + p {
   width: 1px;
 }
 
-section>h2 {
-  padding-top: 8rem;
-}
-
 article {
   margin: 1rem 0 2rem 0;
   color:rgb(62, 60, 60);
 }
 
 button {
+  margin: 0.5rem;
+  width: 15rem;
   border-radius: 20px;
   border: 1px solid lightgray;
   padding: 0.75rem;
@@ -158,22 +156,24 @@ a {
 
 a:hover {
   color: var(--primary-color);
+  text-decoration: underline;
 }
 
 nav {
+  z-index: 999;
   background-color: var(--bg-dark);
   padding: 1rem;
   border-bottom: 3px solid var(--secondary-color);
   position: fixed;
   top: 0;
   width: 100%
-
 }
 
 nav>span>ul {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
 }
 
 nav>span>ul>li {
@@ -188,9 +188,35 @@ nav a:visited, nav a:link {
   color: white;
 }
 
-#active-link {
+nav>span>ul>li .active-link {
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.banner {
+  overflow: hidden;
+  height: 38rem;
+}
+
+.banner img {
+  height: auto;
+  width: 100%;
+  top: -9rem;
+  position: relative;
+}
+
+.clear-nav {
+    padding-top: 6rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.app-image {
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
 }
 
 .contact-link {
@@ -258,6 +284,21 @@ article {
 }
 
 @media screen and (max-width: 600px) {
+  .banner {
+    overflow: hidden;
+    height: 20rem;
+  }
+
+  .banner img {
+    top: 4rem;
+  }
+
+  nav>span>ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
   body {
     align-self: center;
   }
@@ -308,10 +349,6 @@ article {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-
-  article h2{
-    margin-top: 4rem;
-   }
 
   .work-section {
     top: 0;
