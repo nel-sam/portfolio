@@ -214,8 +214,8 @@ section {
 }
 
 .app-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 15rem;
   max-width: 30rem;
 }
 
@@ -370,5 +370,16 @@ article {
   .work-summary {
     border-left: 1px solid grey;
     padding-left: 1rem;
+  }
+
+  #app-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+  }
+
+  .app-section {
+    margin-right: 2rem;
+    max-width: 25rem;
   }
 }
