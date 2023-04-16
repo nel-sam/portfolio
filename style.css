@@ -283,6 +283,10 @@ article {
   padding: 2rem;
 }
 
+#byron-bio, #nelson-bio {
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 600px) {
   .banner {
     overflow: hidden;
