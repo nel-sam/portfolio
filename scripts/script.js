@@ -1,21 +1,40 @@
-var skipLink = document.querySelector('.skip-link');
+let section = document.querySelectorAll("section");
+let menu = document.querySelectorAll("header nav a");
 
-skipLink.addEventListener('click', function (e) {
-  document.querySelector(skipLink.getAttribute('href')).focus();
-});
+window.onscroll = () => {
+  section.forEach((i) => {
+    let top = window.scrollY;
+    let offset = i.offsetTop - 150;
+    let height = i.offsetHeight;
+    let id = i.getAttribute("id");
 
-function setActiveLink(id) {
-  const className = 'active-link';
-  const clearNavClass = 'clear-nav';
+    if (top >= offset && top < offset + height) {
+      menu.forEach((link) => {
+        link.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+};
 
-  const currentActive = document.querySelector(`.${className}`);
-  currentActive.classList.remove(className);
-  const activeSection = document.querySelector(`.${clearNavClass}`);
-  activeSection.classList.remove(clearNavClass);
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
 
-  const toActivate = document.getElementById(id);
-  toActivate.classList.add(className);
-  const toActivateSectionSelector = id.replace('-link','');
-  const toActivateSection = document.querySelector(`#${toActivateSectionSelector}`);
-  toActivateSection.classList.add(clearNavClass);
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
 }
+
+window.addEventListener("scroll", reveal);
+
+reveal();

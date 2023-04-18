@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
 
 :root {
   --primary-color: #e31b6d;
@@ -6,63 +10,106 @@
   --bg-dark: #1b242f;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html {
-  /* WCAG Level AA 1.4.12 states that users must be able
-  to override the following 4 CSS properties to at least the
-  values set below. I went ahead and just designed the site to
-  these values because I find it helps me read it as well */
+header {
+  background-color: rgb(40, 40, 40);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3 );
   font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.12rem;
-  word-spacing: .16rem;
-
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
-p + p {
+header nav a {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px 10px;
+  align-items: left;
+  text-decoration: none;
+  color: white;
+}
+
+header nav a:hover,
+header nav a.active {
+  transition: 0.5s ease-out;
+  font-size: 1.4rem;
+  background: -webkit-linear-gradient(left,  #e31b6d ,#e31b6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.about-text, .contact-us-text {
+  color: white;
+}
+
+.picture {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(2) {
+  background-image: linear-gradient(180deg, #575758 0%, #2c2c2f 100%);  
+}
+section:nth-child(3) {
+  
+  background: -webkit-linear-gradient(left,  #e31b6d ,#e31b6d);}
+section:nth-child(4) {
+  background-image: linear-gradient(180deg, white 0%, white 100%);
+}
+
+section:nth-child(5) {
+  background-image: linear-gradient(180deg, #575758 0%, #2c2c2f 100%);  
+}
+
+section .container {
+  margin: 70px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.title-about {
+  text-align: center;
+  font-size: 3rem;
+  color: #e31b6d;
+}
+
+.title-meet-devs {
+  text-align: center;
+  font-size: 3rem;
+  color:  #e31b6d;
+}
+
+.title-portfolio {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+
+.title-contact-us {
+  text-align: center;
+  font-size: 3rem;
+  color:  #e31b6d;
+}
+
+p {
   margin-top: 2rem;
-}
-
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-article {
-  margin: 1rem 0 2rem 0;
-  color:rgb(62, 60, 60);
-}
-
-button {
-  margin: 0.5rem;
-  width: 15rem;
-  border-radius: 20px;
-  border: 1px solid lightgray;
-  padding: 0.75rem;
-  box-shadow: 4px 2px 2px lightgray;
-  background-color: white;
-}
-
- button a {
-  color: var(--primary-color)
- }
-
-.skip-link {
-  left: -100%;
-  position: absolute;
-}
-
-.skip-link:focus {
-  left: 50%;
-  top: 0rem;
 }
 
 ul {
@@ -71,152 +118,8 @@ ul {
   padding: 0;
 }
 
-.name-container {
-  margin-bottom: 1rem;;
-}
-
-.name-container .name {
-  margin: 0;
-  padding: 0;
-  font-size: 3rem;
-  line-height: 3.5rem;
-  color: var(--primary-color);
-}
-
-.name-container span {
-  top: -1rem;
-}
-
-.name-container .job-title {
-  font-size: 1.5rem;
-}
-
-.circle-container img {
-  width: 100%;
-  max-width: 12rem;
-  max-height: 12rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  max-width: 60rem;
-}
-
-.page-title {
-  color: white;
-}
-
-.centered-text {
-  text-align: center;
-}
-
-.badge-container {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-}
-
-.badge {
-  margin: 1rem;
-  min-height: 4rem;
-  min-width: 4rem;
-  max-height: 4rem;
-  max-width: 4rem;
-  border-radius: 30%;
-  color: white;
-  background-color: var(--secondary-color);
-}
-
-.badge img {
-  margin-top: 0.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-bottom: -0.25rem;
-  filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(62deg) brightness(99%) contrast(105%);
-}
-
-.badge span {
-  font-size: 0.75rem;
-}
-
 a:visited, a:link {
   text-decoration: none;
-}
-
-a {
-  color: var(--secondary-color);
-}
-
-a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-nav {
-  z-index: 999;
-  background-color: var(--bg-dark);
-  padding: 1rem;
-  border-bottom: 3px solid var(--secondary-color);
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-nav>span>ul {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-}
-
-nav>span>ul>li {
-  margin-right: 2rem;
-}
-
-nav>span>ul>li>a:hover {
-  color: var(--primary-color);
-}
-
-nav a:visited, nav a:link {
-  color: white;
-}
-
-nav>span>ul>li .active-link {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-.banner {
-  overflow: hidden;
-  height: 38rem;
-}
-
-.banner img {
-  height: auto;
-  width: 100%;
-  top: -9rem;
-  position: relative;
-}
-
-.clear-nav {
-    padding-top: 6rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-.app-image {
-  width: auto;
-  max-height: 15rem;
-  max-width: 30rem;
 }
 
 .contact-link {
@@ -224,166 +127,163 @@ section {
 }
 
 .contact-link img {
-  width: 0.8rem;
+  width: 1rem;
 }
 
-.contact-card {
-  font-family: Karla;
+
+.badge-container {
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
 }
 
-.education-line {
+.badge {
+  margin: 0.2rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  max-height: 3rem;
+  max-width: 3rem;
+  border-radius: 30%;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.badge img {
+  margin-top: 0.5rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-bottom: -0.25rem;
+  filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(62deg) brightness(99%) contrast(105%);
+}
+
+.badge span {
+  font-size: 0.88rem;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:visited, a:link {
+  text-decoration: none;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.summary-block {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.education-line {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
+.work-summary {
+  border-bottom: 1px solid grey;
 }
 
-.education-line span {
-  min-width: 16rem;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
 }
 
-article {
-  line-height: 1.5rem;
+.wrapper-bio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
 
-.work-section {
-  margin: 2rem 0;
+.wrapper-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
 }
 
-.work-section .work-info {
-  display: flex;
-  flex-direction: row;
+.icons li{
+  display: inline;
 }
-
-.work-section .work-info img {
-  height: 8rem;
-  width: 8rem;
-  margin-right: 1rem;
-}
-
-.work-section .work-info-text {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.city {
-  color: rgb(62, 60, 60);
+.icons {
+  margin-bottom: 0.5rem;
 }
 
 .page-footer {
-  background-color: var(--bg-dark);
-  color: white;
+  background-color: rgb(40, 40, 40);
+  color: --primary-color;
   font-size: larger;
-  min-height: 5rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
-#byron-bio, #nelson-bio {
-  margin-bottom: 1rem;
+.page-title {
+  color: white;
+}
+
+.contact-us {
+  text-align: center;
+}
+
+/* Slide */
+.slider {
+  width: 1000px;
+  height: 619px;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: center;
+  overflow: hidden;
+}
+.image-container {
+  width: 3000px;
+  background-color: var(--primary-color);
+  height: 600px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+#slide-1:target ~ .image-container {
+  left: 0px;
+}
+#slide-2:target ~ .image-container {
+  left: -1000px;
+}
+#slide-3:target ~ .image-container {
+  left: -2000px;
+}
+.buttons {
+  position: relative;
+  top: -40px;
+}
+.buttons a img {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin: 0 0.5rem 0 0.5rem;
+  /* border: 3px gray solid; */
+}
+
+.buttons a img:focus {
+  /* border: 3px red solid; */
 }
 
 @media screen and (max-width: 600px) {
-  .banner {
-    overflow: hidden;
-    height: 20rem;
+  
+  header nav a {
+    padding: 1px 10px;
   }
 
-  .banner img {
-    top: 4rem;
-  }
-
-  nav>span>ul {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  body {
-    align-self: center;
-  }
-
-  main {
-    padding: 1.75rem;
-  }
-
-  .work-summary {
-    border-bottom: 1px solid grey;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  body {
-    align-self: center;
-  }
-
-  main {
-    padding: 2rem;
-  }
-
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-   }
-
-   .circle-container img {
-    height: 10rem;
-    width: 10rem;
-  }
-
-   .education-line {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .education-line strong {
-    min-width: 16rem;
-  }
-
-  .summary-block {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  article {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .work-section {
-    top: 0;
-    display: flex;
-  }
-
-  .work-section .work-info {
-    display: flex;
-    flex-direction: column;
-    min-width: 11rem;
-  }
-
-  .work-section .work-info img {
-    height: 5rem;
-    width: 5rem;
-    margin-bottom: 1rem;
-  }
-
-  .work-summary {
-    border-left: 1px solid grey;
-    padding-left: 1rem;
-  }
-
-  #app-gallery {
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-  }
-
-  .app-section {
-    margin-right: 2rem;
-    max-width: 25rem;
+  .title {
+    font-size: 3.0rem;
   }
 }
