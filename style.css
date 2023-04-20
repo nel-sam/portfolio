@@ -2,7 +2,11 @@
 * {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
+}
+
+body {
+  height: 100%;
 }
 
 :root {
@@ -94,10 +98,6 @@ section:nth-child(5) {
   color: black;
 }
 
-p {
-  margin-top: 1.2rem;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -177,6 +177,10 @@ a:link {
   margin-bottom: 0.5rem;
 }
 
+.slide {
+  position: relative;
+}
+
 .page-footer {
   background-color: rgb(40, 40, 40);
   color: --primary-color;
@@ -201,13 +205,86 @@ a:link {
   height: auto;
 }
 
-.slider img {
-  width: 100%;
-  height: auto;
-}
-
 .buttons {
   display: none;
+}
+
+.slide-container {
+  width: 100%;
+  height: 1120px;
+}
+
+.slide-1 {
+  background-image: url("./images/Slide1.png");
+}
+
+.slide-2 {
+  background-image: url("./images/Slide3.png");
+}
+
+.slide-3 {
+  background-image: url("./images/Slide2.png");
+}
+
+.slide-4 {
+  background-image: url("./images/Slide4.png");
+}
+
+.slide {
+  height: 280px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-left {
+  text-align: left;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  padding: 0 1rem 0 1rem;
+}
+
+.top-left .navika-title {
+  color: rgb(40, 80, 118);
+  font-size: 1.2rem;
+}
+
+.top-left p {
+  font-size: 1rem;
+}
+
+.stores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 3rem;
+}
+
+.stores a {
+  font-size: 0.5rem;
+  color: white;
+}
+
+.stores img {
+  width: 1.3rem;
+}
+
+.top-left .handrills-title {
+  color: rgb(170, 44, 86);
+  font-size: 1rem;
+}
+.top-left .nareru-title {
+  color: rgb(255, 94, 41);
+  font-size: 1rem;
+}
+
+.bottom-left {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  color: white;
 }
 
 /* End of general section */
@@ -245,7 +322,6 @@ a:link {
   .slider {
     width: 1000px;
     height: 619px;
-    background-color: yellow;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -253,9 +329,8 @@ a:link {
     overflow: hidden;
   }
 
-  .image-container {
-    width: 3000px;
-    background-color: var(--primary-color);
+  .slide-container {
+    width: 4000px;
     height: 600px;
     clear: both;
     position: relative;
@@ -265,9 +340,10 @@ a:link {
     transition: left 2s;
   }
 
-  .image-container img {
+  .slide {
     max-width: 1000px;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
   .slide {
@@ -277,25 +353,65 @@ a:link {
     position: relative;
   }
 
-  #slide-1:target ~ .image-container {
+  #slide-1:target ~ .slide-container {
     left: 0px;
   }
 
-  #slide-2:target ~ .image-container {
+  #slide-2:target ~ .slide-container {
     left: -1000px;
   }
 
-  #slide-3:target ~ .image-container {
+  #slide-3:target ~ .slide-container {
     left: -2000px;
   }
 
-  .buttons {
-    position: relative;
-    top: -40px;
+  #slide-4:target ~ .slide-container {
+    left: -3000px;
+  }
+
+  .top-left {
+    top: 60px;
+    left: 16px;
+  }
+
+  .top-left .navika-title {
+    font-size: 3rem;
+  }
+
+  .top-left .handrills-title {
+    font-size: 3rem;
+  }
+  .top-left .nareru-title {
+    font-size: 3rem;
+  }
+
+  .top-left p {
+    font-size: 1rem;
+  }
+
+  .bottom-left {
+    text-align: left;
+    bottom: 80px;
+    left: 160px;
+    font-size: 2rem;
+  }
+
+  .stores {
+    width: 5rem;
+  }
+
+  .stores a {
+    font-size: 1rem;
+  }
+
+  .stores img {
+    width: 2rem;
   }
 
   .buttons {
     display: inherit;
+    position: relative;
+    top: -40px;
   }
 
   .buttons a img {
@@ -304,10 +420,5 @@ a:link {
     width: 30px;
     border-radius: 100%;
     margin: 0 0.5rem 0 0.5rem;
-    /* border: 3px gray solid; */
-  }
-
-  .buttons a img:focus {
-    /* border: 3px red solid; */
   }
 }
