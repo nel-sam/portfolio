@@ -1,8 +1,8 @@
-let section = document.querySelectorAll("section");
+let areas = document.querySelectorAll(".area");
 let menu = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
-  section.forEach((i) => {
+  areas.forEach((i) => {
     let top = window.scrollY;
     let offset = i.offsetTop - 150;
     let height = i.offsetHeight;
