@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 * {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather Sans", serif;
 }
 
 body {
@@ -132,39 +132,41 @@ a:link {
 }
 
 .contact-link img {
-  width: 1.7rem;
+  width: 2rem;
+  height: auto;
   padding: 1rem 1rem 0 0;
 }
 
 .badge-container {
-  margin: 0 0 0.2rem 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-flow: wrap;
 }
 
 .badge {
-  margin: 0.1rem;
-  min-height: 3rem;
-  min-width: 3rem;
-  max-height: 3rem;
-  max-width: 3rem;
-  border-radius: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0.4rem 1rem 0.4rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  border: 2px white solid;
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--bg-dark);
 }
 
 .badge img {
-  margin-top: 0.5rem;
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-bottom: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(62deg) brightness(99%)
     contrast(105%);
 }
 
 .badge span {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
 }
 
 a {
@@ -305,14 +307,6 @@ a:link {
 
 /* Big screens below */
 @media screen and (min-width: 800px) {
-  section .container {
-    margin: 208px;
-  }
-
-  section .container .about {
-    margin: 300px;
-  }
-
   section:nth-child(2) {
     background-size: 70rem;
   }
