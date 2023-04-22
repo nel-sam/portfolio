@@ -69,7 +69,7 @@ section {
 section,
 #portfolio {
   /* room for the fixed menu */
-  padding-top: 8rem;
+  padding-top: 9rem;
 }
 
 section:nth-child(2) {
@@ -316,8 +316,7 @@ a:link {
 
 /* Big screens below */
 @media screen and (min-width: 800px) {
-  section,
-  #portfolio {
+  section {
     /* room for the fixed menu */
     padding-top: 3rem;
   }
@@ -343,12 +342,6 @@ a:link {
     margin-bottom: 3rem;
   }
 
-  .wrapper-portfolio {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr; */
-  }
-
   .bio-video {
     height: 35rem;
     width: auto;
@@ -357,7 +350,8 @@ a:link {
   .name {
     font-size: 1.6rem;
   }
-  /* Slide */
+
+  /* Slider */
   .slider {
     width: 1000px;
     height: 700px;
@@ -377,17 +371,18 @@ a:link {
     -moz-transition: left 2s;
     -o-transition: left 2s;
     transition: left 2s;
+    padding-top: 2rem;
+  }
+
+  #portfolio {
+    padding-top: 0;
   }
 
   .slide {
     max-width: 1000px;
     width: 100%;
     height: 100%;
-  }
-
-  .slide {
     float: left;
-    margin: 0px;
     padding: 0px;
     position: relative;
   }
@@ -443,7 +438,16 @@ a:link {
     width: 8rem;
   }
 
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .buttons {
+    width: fit-content;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 2rem;
     display: inherit;
     position: relative;
     top: -40px;
