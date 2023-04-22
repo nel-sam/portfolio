@@ -330,29 +330,28 @@ a:link {
     padding: 1rem 4rem;
   }
 
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .wrapper-bio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    height: 35rem;
+    max-width: 50rem;
     margin-bottom: 3rem;
+  }
+
+  .wrapper-portfolio {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr; */
   }
 
   .bio-video {
     height: 35rem;
     width: auto;
-  }
-
-  .wrapper-portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
   }
 
   .name {
