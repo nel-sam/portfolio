@@ -3,6 +3,7 @@
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Merriweather Sans", serif;
+  letter-spacing: 0.05rem;
 }
 
 body {
@@ -35,6 +36,7 @@ header nav a {
   align-items: left;
   text-decoration: none;
   color: white;
+  font-size: 2rem;
 }
 
 header nav a:hover,
@@ -44,6 +46,7 @@ header nav a.active {
   background: -webkit-linear-gradient(left, #e31b6d, #e31b6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
 }
 
 .about-text,
@@ -51,9 +54,9 @@ header nav a.active {
   color: white;
 }
 
-.picture {
-  max-width: 100%;
+.bio-video {
   height: auto;
+  width: 100%;
 }
 
 section {
@@ -61,6 +64,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section,
+#portfolio {
+  /* room for the fixed menu */
+  padding-top: 8rem;
 }
 
 section:nth-child(2) {
@@ -303,18 +312,34 @@ a:link {
   color: white;
 }
 
-/* End of general section */
+/* End of general */
 
 /* Big screens below */
 @media screen and (min-width: 800px) {
+  section,
+  #portfolio {
+    /* room for the fixed menu */
+    padding-top: 3rem;
+  }
+
   section:nth-child(2) {
     background-size: 70rem;
+  }
+
+  .about-text {
+    padding: 1rem 4rem;
   }
 
   .wrapper-bio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    margin-bottom: 3rem;
+  }
+
+  .bio-video {
+    height: 35rem;
+    width: auto;
   }
 
   .wrapper-portfolio {
