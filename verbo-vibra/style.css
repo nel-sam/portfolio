@@ -1,0 +1,107 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Important to include padding and border in the element's total width */
+}
+
+#verbo-select {
+    font-weight: bold;
+    appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none; /* Remove default arrow in some browsers */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-position: right .75rem top 50%;
+    background-size: .65rem auto;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem !important;
+    margin-bottom: 50px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.answer-input {
+    font-size: 1em;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="text"], select, button {
+        font-size: 0.9em;
+    }
+}
+
+.correct {
+    color: green;
+    position: relative;
+    padding-right: 25px; /* Make space for the checkmark */
+}
+
+.correct::after {
+    content: "✓"; /* Unicode character for checkmark */
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+.incorrect {
+    color: red;
+    position: relative;
+    padding-right: 25px; /* Make space for the cross */
+}
+
+.incorrect::after {
+    content: "✗"; /* Unicode character for cross */
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
