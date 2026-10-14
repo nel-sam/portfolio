@@ -1,388 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      name="Description"
-      content="Casitek LLC: Software development agency based in the United States founded by
-                                    Nelson Samayoa, an experienced and passionate
-                                    software developer with a love for best practices and
-                                    an appreciation of aesthetics and UI/UX."
+      name="description"
+      content="Casitek is an independent software development studio founded by Nelson Samayoa. Meet the developers and explore our web and mobile projects."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       property="og:image"
       content="https://nel-sam.github.io/portfolio/images/preview.png"
     />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
-    <title>Casitek LLC | Software Development Contractors</title>
+    <meta name="theme-color" content="#f5f3ef" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Casitek — Thoughtful software, built together</title>
   </head>
-
   <body>
-    <header>
-      <nav>
-        <a href="#about">ABOUT</a>
-        <a href="#meet-devs">MEET THE DEVS</a>
-        <a href="#portfolio">PORTFOLIO</a>
-        <a href="#contact-us">CONTACT US</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Casitek home">
+        <span class="wordmark-mark" aria-hidden="true">c.</span>
+        <span>casitek</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#studio">Studio</a>
+        <a href="#people">People</a>
+        <a href="#work">Selected work</a>
+        <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
-   
-    <section id="about" class="area">
-      <div class="container reveal">
-        <div class="about">
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Independent software studio</p>
+          <h1 id="hero-title">Good ideas deserve <span>great software.</span></h1>
+          <p class="hero-intro">
+            We’re a small team building thoughtful web and mobile experiences,
+            from the first sketch to the finished product.
+          </p>
+          <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-core"><span>c.</span></div>
+          <span class="art-note note-one">DESIGN</span>
+          <span class="art-note note-two">DEVELOP</span>
+          <span class="art-note note-three">DELIVER</span>
+          <span class="art-spark spark-one">✳</span>
+          <span class="art-spark spark-two">✳</span>
+        </div>
+        <a class="scroll-cue" href="#studio"><span></span> Scroll to explore</a>
+      </section>
+
+      <section class="intro-section section-wrap" id="studio" aria-labelledby="studio-title">
+        <div class="section-label"><span>01</span> The studio</div>
+        <div class="intro-content">
+          <h2 id="studio-title">Small by design.<br /><span>Thoughtful by nature.</span></h2>
+          <div class="intro-details">
+            <p>
+              Founded by Nelson Samayoa in 2020, Casitek brings together two
+              experienced developers who care about the details as much as the
+              big picture. Together, we’ve spent over 16 years turning ideas
+              into useful, lasting software.
+            </p>
+            <p>
+              We work directly with our clients, combining clear communication,
+              considered design, and carefully crafted code. No handoffs, no
+              outsourcing—just a small team that knows your project inside out.
+            </p>
+            <div class="studio-facts">
+              <div><strong>16<span>+</span></strong><span>years combined experience</span></div>
+              <div><strong>02</strong><span>developers, start to finish</span></div>
+              <div><strong>100<span>%</span></strong><span>hands-on collaboration</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="people-section section-wrap" id="people" aria-labelledby="people-title">
+        <div class="section-heading">
+          <div class="section-label"><span>02</span> The people</div>
+          <h2 id="people-title">A good team makes<br />good things happen.</h2>
+        </div>
+        <div class="people-grid">
+          <article class="person-card">
+            <img class="person-photo" src="./images/nelson.jpg" alt="Nelson Samayoa"/>
+            <div class="person-details">
+              <p class="person-role">Co-founder · Software developer</p>
+              <h3>Nelson Samayoa</h3>
+              <p>
+                A full-stack developer with 19+ years of .NET and C# experience,
+                and a love for clean interfaces, lightweight code, and learning
+                languages. Fluent in English, Spanish, French, and Japanese.
+              </p>
+              <div class="person-links">
+                <a href="https://linkedin.com/in/nelsonsamayoa" target="_blank" rel="noreferrer">
+                  <img src="./images/icons/linkedin.png" alt="" width="24" height="24" /> LinkedIn
+                </a>
+                <a href="https://github.com/nel-sam" target="_blank" rel="noreferrer">
+                  <img src="./images/icons/github.png" alt="" width="24" height="24" /> GitHub
+                </a>
+                <a href="https://apps.apple.com/jo/developer/nelson-samayoa/id1571438238" target="_blank" rel="noreferrer">App Store ↗</a>
+              </div>
+              <p class="person-aside">The cool neighbor who can fix anything from devices to drywall, and will do it for the fun of it.</p>
+            </div>
+          </article>
+          <article class="person-card">
+            <img class="person-photo" src="./images/bayron.jpg" alt="Bayron Pineda"/>
+            <div class="person-details">
+              <p class="person-role">Co-founder · Software developer</p>
+              <h3>Bayron Pineda</h3>
+              <p>
+                A computer science graduate and software developer who loves
+                growing his craft, exploring new tools, and building web and
+                mobile apps. When he’s away from his keyboard, he’s probably
+                out hiking, running, or playing soccer.
+              </p>
+              <div class="person-links">
+                <a href="https://linkedin.com/in/bayronpineda" target="_blank" rel="noreferrer">
+                  <img src="./images/icons/linkedin.png" alt="" width="24" height="24" /> LinkedIn
+                </a>
+                <a href="https://github.com/byronxc" target="_blank" rel="noreferrer">
+                  <img src="./images/icons/github.png" alt="" width="24" height="24" /> GitHub
+                </a>
+              </div>
+              <p class="person-aside">Always learning, always growing, always willing to help.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
+        <div class="section-heading work-heading">
           <div>
-            <h1 class="title-about">Casitek</h1>
-            <article class="about-text">
-              <p>
-                Casitek is a web development company that was founded by Nelson
-                Samayoa in 2020. Casitek operates in a team of two experienced
-                software developers who absolutely love what they do. Combined
-                we have over 16 years in the industry and have worked on a
-                variety of projects, from small websites to large scale web
-                applications. We are currently working on a variety of projects,
-                including a mobile apps for language learning, web applications
-                for a variety of clients, and a web application for a local
-                non-profit organization.
-              </p>
-              <p>
-                Our pricing model is simple. We charge a flat rate of $50 per hour (for our first few projects) for all of our services.
-                We are also willing to work on a project for a fixed price, which is determined by the scope of the project. 
-                We work as a team on all of our projects, which allows us to be more efficient and to deliver a better product to our clients. 
-                We also never outsource our work to other developers, which means that we know every line of code we write.
-              </p>
-            </article>
+            <div class="section-label"><span>03</span> Selected work</div>
+            <h2 id="work-title">A few things we’ve<br />put into the world.</h2>
           </div>
+          <p>Language learning, wellness, and ideas made real through software.</p>
         </div>
-      </div>
-    </section>
-    
-    <section id="meet-devs" class="area">
-      <div class="container reveal">
-        <div class="meet-devs">
-          <div class="wrapper">
-            <div id="nelson-bio">
-              <div class="wrapper-bio">
-                <video
-                  class="bio-video"
-                  autoplay=""
-                  loop=""
-                  muted=""
-                  playsinline=""
-                  preload="auto"
-                  class="js-video-autoplay"
-                  poster=""
-                >
-                  <source src="images/nelson.mp4" type="video/mp4" />
-                </video>
-                <article
-                  class="summary-block"
-                  aria-label="Professional Overview"
-                >
-                <aside
-                class="contact-card"
-                aria-label="Name, title, and contact information"
-              >
-                <hgroup class="name-container">
-                  <h1 class="name">Nelson Samayoa  Software Developer</h1>
-                </hgroup>
-                <div class="icons">
-                  <ul>
-                    <li class="contact-link">
-                      <a href="https://linkedin.com/in/nelsonsamayoa" target="_blank">
-                        <img
-                          src="./images/loading.gif"
-                          data-lazy="./images/icons/linkedin.png"
-                          alt=""
-                          aria-label="LinkedIn link"
-                        />
-                      </a>
-                    </li>
-                    <li class="contact-link">
-                      <a target="#" href="https://github.com/nel-sam" target="_blank">
-                        <img
-                          src="./images/loading.gif"
-                          data-lazy="./images/icons/github.png"
-                          alt=""
-                          aria-label="GitHub link"
-                        />
-                      </a>
-                    </li>
-                    <li class="contact-link">
-                      <a
-                        target="#"
-                        href="https://apps.apple.com/jo/developer/nelson-samayoa/id1571438238"
-                      >
-                        <img
-                          src="./images/loading.gif"
-                          data-lazy="./images/icons/appstore2.png"
-                          alt=""
-                          aria-label="AppStore link"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </aside>
-                  Over 12 years as a .Net/C# and 2+ years as an web and mobile
-                  app developer. A believer in the term full-stack. Passionate
-                  about UI/UX, sleek design, simple light-weight code, and
-                  modern practices and tools. I'm a programmer as a profession
-                  and as a hobby. Native speaker of English and Spanish.
+        <div class="project-grid">
+          <article class="project-card project-blue">
+            <a class="project-image" href="https://apps.apple.com/by/app/navika/id1571438236?platform=iphone" target="_blank" rel="noreferrer" aria-label="Explore Navika on the App Store">
+              <img src="./images/Slide1.png" alt="Screens from the Navika Serbian and Croatian learning app" width="1024" height="640" loading="lazy" />
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-meta"><span>01 / LANGUAGE LEARNING</span><span>iOS · Android</span></div>
+            <h3>navika</h3>
+            <p>A practical companion for Serbian and Croatian grammar, cases, verbs, and Cyrillic.</p>
+            <div class="store-links">
+              <a href="https://apps.apple.com/by/app/navika/id1571438236?platform=iphone" target="_blank" rel="noreferrer">App Store ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=com.nrsdev.navika" target="_blank" rel="noreferrer">Google Play ↗</a>
+            </div>
+          </article>
+          <article class="project-card project-orange">
+            <a class="project-image" href="https://play.google.com/store/apps/details?id=com.nrsdev.handrills" target="_blank" rel="noreferrer" aria-label="Explore HanDrills on Google Play">
+              <img src="./images/Slide2.png" alt="Screens from the HanDrills Korean grammar learning app" width="1024" height="640" loading="lazy" />
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-meta"><span>02 / LANGUAGE LEARNING</span><span>iOS · Android</span></div>
+            <h3>HanDrills</h3>
+            <p>Short, focused drills that make challenging Korean grammar easier to practice.</p>
+            <div class="store-links">
+              <a href="https://apps.apple.com/by/app/handrills/id1602883122?platform=iphone" target="_blank" rel="noreferrer">App Store ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=com.nrsdev.handrills" target="_blank" rel="noreferrer">Google Play ↗</a>
+            </div>
+          </article>
+          <article class="project-card project-coral">
+            <a class="project-image" href="#contact" aria-label="Ask us about nareru">
+              <img src="./images/Slide3.png" alt="Screens from the nareru Japanese learning app" width="1024" height="640" loading="lazy" />
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-meta"><span>03 / LANGUAGE LEARNING</span><span>Mobile app</span></div>
+            <h3>nareru</h3>
+            <p>A friendly way to get comfortable with Japanese grammar, numbers, and everyday practice.</p>
+            <div class="store-links"><a href="#contact">Ask us about this project ↗</a></div>
+          </article>
+          <article class="project-card project-sand">
+            <a class="project-image" href="https://riseandthrivewellness.com" target="_blank" rel="noreferrer" aria-label="Visit Rise and Thrive Wellness">
+              <img src="./images/Slide4.png" alt="Rise and Thrive Wellness website shown on mobile screens" width="1024" height="640" loading="lazy" />
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-meta"><span>04 / WELLNESS</span><span>Web · WordPress</span></div>
+            <h3>Rise &amp; Thrive</h3>
+            <p>A welcoming wellness website connecting clients with personal training and services.</p>
+            <div class="store-links"><a href="https://riseandthrivewellness.com" target="_blank" rel="noreferrer">Visit the website ↗</a></div>
+          </article>
+        </div>
+      </section>
 
-                  <ul class="badge-container">
-                    <li class="badge">
-                        <img src="./images/icons/language-solid.svg" />
-                        <span>Langs</span>
-                    </li>
-                    <li class="badge">
-                        <img src="./images/icons/code-solid.svg" />
-                        <span>Code</span>
-                    </li>
-                    <li class="badge">
-                        <img src="./images/icons/mug-hot-solid.svg" />
-                        <span>Coffee</span>
-                    </li>
-                    <li class="badge">
-                        <img src="./images/icons/beer-mug-empty-solid.svg" />
-                        <span>Beer</span>
-                    </li>
-                  </ul>
-                  Languages, coding, food, coffee, and beer in that order are
-                  the things I'm most into. Originally from Guatemala and
-                  brought to the US as a young child, I grew up in Portland,
-                  Oregon and pretty much absorbed all the hippy concepts that
-                  the culture in Portland has become known for. I love languages
-                  and currently am able to speak English, Spanish, French, and
-                  Japanese fluently. I am also working on Korean and
-                  SerboCroatian.
-                </article>
-              </div>
-            </div>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-wrap contact-inner">
+          <div class="section-label"><span>04</span> Let’s talk</div>
+          <h2 id="contact-title">Have something<br />good in mind?</h2>
+          <div class="contact-bottom">
+            <p>Tell us what you’re working on. We’d love to hear about it.</p>
+            <a class="contact-email" href="mailto:casitekllc@gmail.com">casitekllc@gmail.com <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <div id="byron-bio">
-              <div class="wrapper-bio">
-                <video
-                  class="bio-video"
-                  autoplay=""
-                  loop=""
-                  muted=""
-                  playsinline=""
-                  preload="auto"
-                  class="js-video-autoplay"
-                  poster=""
-                >
-                  <source src="images/bayron.mp4" type="video/mp4" />
-                </video>
-                <article
-                  class="summary-block"
-                  aria-label="Professional Overview"
-                >
-                <aside
-                class="contact-card"
-                aria-label="Name, title, and contact information"
-              >
-                <hgroup class="name-container">
-                  <h1 class="name">Bayron Pineda  Software Developer</h1>
-                </hgroup>
-                <div>
-                  <ul class="icons">
-                    <li class="contact-link">
-                      <a href="https://linkedin.com/in/bayronpineda" target="_blank">
-                        <img
-                          src="./images/loading.gif"
-                          data-lazy="./images/icons/linkedin.png"
-                          alt=""
-                          aria-label="LinkedIn link"
-                        />
-                      </a>
-                    </li>
-                    <li class="contact-link">
-                      <a target="#" href="https://github.com/byronxc" target="_blank">
-                        <img
-                          src="./images/loading.gif"
-                          data-lazy="./images/icons/github.png"
-                          alt=""
-                          aria-label="GitHub link"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                  Software Developer with 2 years of experience developing
-                  mobile and web apps. I graduated From California State
-                  University Northridge with a bachelor degree in Computer
-                  Science. Passionate about both personal growth and learning
-                  new coding skills. I also keep myself updated on the latest
-                  trends and developments in the field to enhance my skills and
-                  knowledge.
-
-                  <ul class="badge-container">
-                    <li class="badge">
-                        <img src="./images/icons/person-hiking-solid.svg" />
-                        <span>Hike</span>
-                    </li>
-                    <li class="badge">
-                        <img src="./images/icons/person-running-solid.svg" />
-                        <span>Run</span>
-                    </li>
-                    <li class="badge">
-                        <img src="./images/icons/futbol-solid.svg" />
-                        <span>Soccer</span>
-                    </li>
-                  </ul>
-                  Born and raised in a small town in Guatemala and I became a
-                  Californian in 2014. I am always eager to learn more about
-                  self-improvement and health. When not coding, I like to unwind
-                  by doing physical activities like hiking, running, and soccer,
-                  which also help me stay inspired and creative in my work.
-                </article>
-              </div>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <div id="portfolio" class="area">
-      <div class="container reveal">
-        <div class="slider">
-          <span id="slide-1"></span>
-          <span id="slide-2"></span>
-          <span id="slide-3"></span>
-          <span id="slide-4"></span>
-          <div class="slide-container">
-            <div class="slide slide-1">
-              <div class="top-left">
-                <h2 class="navika-title">navika</h2>
-                <article>
-                  <p>Our most developed app and it's main goal is to get users familiarized with the difficult grammar points of the Serbo-Croation family.</p>
-                </article>
-              </div>
-              <div class="bottom-left">
-                <div class="stores">
-                    <a href="https://apps.apple.com/by/app/navika/id1571438236?platform=iphone">
-                      <img
-                        src="./images/icons/appstore.png"
-                        data-lazy="./images/icons/appstore.png"
-                        alt=""
-                        aria-label="App Store link"
-                      />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.nrsdev.navika" target="_blank">
-                      <img
-                        src="./images/icons/google.png"
-                        data-lazy="./images/icons/google.png"
-                        alt=""
-                        aria-label="Google Store link"
-                      />
-                    </a>
-                </div>
-              </div>
-            </div>
-            <div class="slide slide-2">
-              <div class="top-left">
-                <h2 class="nareru-title">nareru</h2>
-                <article>
-                  <p>nareru's aim is the familiarize the user with the most difficult grammar points of the Japanese language.
-                  </p>
-                </article>
-              </div>
-              <div class="bottom-left">
-              </div>
-            </div>
-            <div class="slide slide-3">
-              <div class="top-left">
-                <h2 class="handrills-title">HanDrills</h2>
-                <article>
-                  <p>HanDrills' aim is the familiarize the user with the most difficult grammar points of the Korean language.</p>
-                </article>
-              </div>
-              <div class="bottom-left">
-                <div class="stores">
-                    <a href="https://apps.apple.com/by/app/handrills/id1602883122?platform=iphone" target="_blank">
-                      <img
-                        src="./images/icons/appstore.png"
-                        data-lazy="./images/icons/appstore.png"
-                        alt=""
-                        aria-label="App Store link"
-                      />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.nrsdev.handrills" target="_blank">
-                      <img
-                        src="./images/icons/google.png"
-                        data-lazy="./images/icons/google.png"
-                        alt=""
-                        aria-label="Google Store link"
-                      />
-                    </a>
-                </div>
-              </div>
-            </div>
-            <div class="slide slide-4">
-              <div class="top-left">
-                <h2 class="nareru-title">Rise and Thrive</h2>
-                <article>
-                  <p>A WordPress website created for clients to read information about personal training services.</p>
-                </article>
-              </div>
-              <div class="bottom-left">
-                <div class="stores">
-                    <a href="https://riseandthrivewellness.com" target="_blank">
-                      riseandthrivewellness.com
-                    </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="button-wrapper">
-            <div class="buttons">
-              <a href="#slide-1">
-                <img src="/images/icon-navika.jpeg" width="30" height="30" />
-              </a>
-              <a href="#slide-2">
-                <img src="/images/icon-nareru.png" width="30" height="30" />
-              </a>
-              <a href="#slide-3">
-                <img src="/images/icon-handrills.png" width="30" height="30" />
-              </a>
-              <a href="#slide-4">
-                <img src="/images/icon-trive.png" width="30" height="30" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <section id="contact-us" class="area">
-      <div class="container reveal">
-        <div class="contact-us">
-          <h1 class="title-contact-us">Let's get in touch</h1>
-          
-          <a class="email" href="mailto:casitekllc@gmail.com" target="_blank"><p>casitekllc@gmail.com</p></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="page-footer">
-      <span class="page-title">
-        Casitek LLC | Software Development Contractors
-      </span>
-      <div><a href="no-collection-policy.html" target="_blank">Privacy Policy</a></div>
-      <div><a href="sitemap.xml">Site Map</a></div>
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">c.</span><span>casitek</span></a>
+      <span>Thoughtful software, built together.</span>
+      <div><a href="./no-collection-policy.html">Privacy</a><a href="./sitemap.xml">Sitemap</a><span>© 2026 Casitek</span></div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="scripts/script.js"></script>
-    <script src="./scripts/lazy.js"></script>
-    <script>
-      lazy.init();
-    </script>
   </body>
 </html>
