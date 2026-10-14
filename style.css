@@ -406,6 +406,8 @@ p {
   padding: 27px;
   background: var(--white);
   border: 1px solid #e5e3dc;
+  justify-items: center;
+  align-items: center;
 }
 
 .person-role {
