@@ -65,8 +65,8 @@ a:focus-visible {
 }
 
 .wordmark-mark {
-  width: 29px;
-  height: 29px;
+  min-width: 29px;
+  min-height: 29px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -328,8 +328,7 @@ p {
 
 .section-heading {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -429,11 +428,16 @@ p {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 62px 26px;
   margin-top: 57px;
   padding-bottom: 57px;
+}
+
+.project-card {
+  max-width: 600px;
 }
 
 .project-image {
@@ -722,8 +726,6 @@ p {
   }
 
   .section-heading {
-    align-items: start;
-    flex-direction: column;
     gap: 18px;
   }
 
