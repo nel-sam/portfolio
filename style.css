@@ -99,6 +99,11 @@ a:focus-visible {
   border-radius: 3px;
 }
 
+.site-header .boxed-links {
+  display: flex;
+  gap: 1rem;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -844,6 +849,8 @@ career-entry {
   .site-header {
     height: 64px;
     padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .site-header nav {
@@ -1027,5 +1034,584 @@ career-entry {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Motion layer (pure CSS)
+   - Load-in and hover animations work everywhere.
+   - Scroll-driven animations only apply where animation-timeline is supported;
+     other browsers simply show the static page.
+   - Everything is skipped when the user prefers reduced motion.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  main {
+    overflow-x: clip;
+  }
+
+  /* ---------- Keyframes ---------- */
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+  }
+
+  @keyframes header-drop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      box-shadow: 0 0 0 0 rgb(87 169 111 / 45%);
+    }
+
+    100% {
+      box-shadow: 0 0 0 10px rgb(87 169 111 / 0%);
+    }
+  }
+
+  @keyframes drip {
+    0% {
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+
+    50% {
+      transform: scaleY(1);
+      transform-origin: top;
+    }
+
+    50.01% {
+      transform-origin: bottom;
+    }
+
+    100% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+  }
+
+  @keyframes shimmer {
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  @keyframes float-orb {
+
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+      transform: translate3d(-30px, 40px, 0) scale(1.08);
+    }
+  }
+
+  @keyframes twinkle {
+
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(90deg);
+    }
+  }
+
+  /* ---------- Page load ---------- */
+
+  .hero-copy>* {
+    animation: rise 800ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  .hero-copy> :nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  .hero-copy> :nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .hero-copy> :nth-child(4) {
+    animation-delay: 300ms;
+  }
+
+  .hero-copy> :nth-child(5) {
+    animation-delay: 400ms;
+  }
+
+  .hero-copy> :nth-child(6) {
+    animation-delay: 500ms;
+  }
+
+  .site-header {
+    animation: header-drop 600ms ease both;
+  }
+
+  .status-dot {
+    animation: pulse-ring 1.8s ease-out infinite;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(90deg, #7e8c7d 0%, #3f7554 25%, #7e8c7d 50%, #7e8c7d 100%);
+    background-size: 200% 100%;
+    padding: 0 0.12em 0.1em 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    width: min(46vw, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgb(184 224 195 / 85%), rgb(184 224 195 / 0%) 70%);
+    pointer-events: none;
+    animation: float-orb 14s ease-in-out infinite;
+  }
+
+  .scroll-cue span {
+    overflow: hidden;
+    position: relative;
+    background: #d4d8d1;
+  }
+
+  .scroll-cue span::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #57625a;
+    animation: drip 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  /* ---------- Hover / interaction ---------- */
+
+  .site-header nav a:not(.nav-contact) {
+    background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat;
+    padding-bottom: 4px;
+    transition: color 160ms ease, background-size 300ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+
+  .site-header nav a:not(.nav-contact):hover {
+    background-size: 100% 1px;
+  }
+
+  .site-header nav .nav-contact {
+    background: linear-gradient(var(--ink), var(--ink)) left / 0 100% no-repeat;
+    transition: color 250ms ease, background-size 300ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+
+  .site-header nav .nav-contact:hover {
+    background-size: 100% 100%;
+    color: var(--white);
+  }
+
+  .wordmark-mark {
+    transition: transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .education img {
+    transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 300ms ease;
+  }
+
+  .career-card {
+    transition: transform 300ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .career-card:hover {
+    transform: translateY(-3px);
+    border-color: #b9c8b9;
+    box-shadow: 0 14px 30px rgb(24 32 29 / 8%);
+  }
+
+  .career-item::after {
+    transition: background-color 300ms ease;
+  }
+
+  .career-item:hover::after {
+    background-color: #3f7554;
+  }
+
+  .project-demo {
+    transition: transform 350ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 350ms ease;
+  }
+
+  .project-card:hover .project-demo {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgb(24 32 29 / 14%);
+  }
+
+  .store-links a {
+    background: linear-gradient(var(--ink), var(--ink)) left bottom / 0 1px no-repeat;
+    transition: background-size 300ms ease, border-color 300ms ease;
+  }
+
+  .store-links a:hover {
+    background-size: 100% 1px;
+    border-color: transparent;
+  }
+
+  .person-card {
+    transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 400ms ease;
+  }
+
+  .person-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgb(24 32 29 / 10%);
+  }
+
+  .person-links a {
+    transition: transform 200ms ease;
+  }
+
+  .person-links a:hover {
+    transform: translateY(-2px);
+  }
+
+  .contact-email span {
+    display: inline-block;
+    transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .contact-email {
+    transition: color 200ms ease;
+  }
+
+  .contact-email:hover {
+    color: var(--green);
+  }
+
+  .contact-email:hover span {
+    transform: translate(4px, -4px) rotate(10deg);
+  }
+
+  /* ---------- Scroll-driven ---------- */
+
+  @supports (animation-timeline: view()) {
+    @keyframes progress {
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes hero-exit {
+      to {
+        opacity: 0;
+        transform: translateY(80px) scale(0.97);
+      }
+    }
+
+    @keyframes fade-out {
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes orb-parallax {
+      to {
+        translate: 0 200px;
+        opacity: 0;
+      }
+    }
+
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+    }
+
+    @keyframes reveal-left {
+      from {
+        opacity: 0;
+        transform: translateX(-48px);
+      }
+    }
+
+    @keyframes reveal-right {
+      from {
+        opacity: 0;
+        transform: translateX(48px);
+      }
+    }
+
+    @keyframes reveal-scale {
+      from {
+        opacity: 0;
+        transform: scale(0.9) translateY(40px);
+      }
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0);
+      }
+    }
+
+    @keyframes draw-line {
+      from {
+        transform: scaleY(0);
+      }
+    }
+
+    @keyframes wipe {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+    }
+
+    @keyframes unclip {
+      from {
+        clip-path: inset(12% 12% 12% 12% round 14px);
+        opacity: 0.4;
+      }
+    }
+
+    @keyframes photo-parallax {
+      from {
+        transform: scale(1.18) translateY(-6%);
+      }
+
+      to {
+        transform: scale(1.18) translateY(6%);
+      }
+    }
+
+    @keyframes slow-spin {
+      to {
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes tint-in {
+      from {
+        letter-spacing: -0.12em;
+        opacity: 0;
+      }
+    }
+
+    /* Reading progress bar under the header */
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #78947c, #3f7554);
+      transform-origin: left;
+      animation: progress linear both;
+      animation-timeline: scroll(root block);
+    }
+
+    /* Hero */
+    .hero-copy {
+      animation: hero-exit linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 70%;
+    }
+
+    .hero::before {
+      animation: float-orb 14s ease-in-out infinite, orb-parallax linear both;
+      animation-timeline: auto, view();
+      animation-range: normal, exit 0% exit 100%;
+    }
+
+    .scroll-cue {
+      animation: fade-out linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 18vh;
+    }
+
+    /* Section labels and headings */
+    .section-label {
+      animation: reveal-left linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+
+    .section-label>span {
+      display: inline-block;
+      animation: pop linear both;
+      animation-timeline: view();
+      animation-range: entry 20% entry 100%;
+    }
+
+    .intro-content h2,
+    .section-heading h2,
+    .contact-inner h2 {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+
+    .contact-inner h2 {
+      animation-name: tint-in, reveal-up;
+      animation-range: entry 0% entry 100%, entry 0% entry 70%;
+    }
+
+    .work-heading>p {
+      animation: reveal-right linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 90%;
+    }
+
+    /* About */
+    .intro-details>p {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+
+    .aboutme-facts {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+
+    .aboutme-facts div {
+      animation: reveal-scale linear both;
+      animation-timeline: view();
+    }
+
+    .aboutme-facts div:nth-child(1) {
+      animation-range: entry 0% entry 70%;
+    }
+
+    .aboutme-facts div:nth-child(2) {
+      animation-range: entry 15% entry 85%;
+    }
+
+    .aboutme-facts div:nth-child(3) {
+      animation-range: entry 30% entry 100%;
+    }
+
+    .person-card-container {
+      animation: reveal-scale linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+
+    .person-photo-container {
+      animation: unclip linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+
+    .person-photo {
+      animation: photo-parallax linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+
+    .person-details>* {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 100%;
+    }
+
+    /* Career timeline */
+    .career-item:nth-child(odd) {
+      animation: reveal-left linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+
+    .career-item:nth-child(even) {
+      animation: reveal-right linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+
+    .career-item::before {
+      transform-origin: top;
+      animation: draw-line linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 55%;
+    }
+
+    .career-item::after {
+      animation: pop linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+
+    .career-logo {
+      animation: reveal-scale linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 60%;
+    }
+
+    /* Projects */
+    .project-card {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 50%;
+    }
+
+    .project-card:nth-child(odd) {
+      animation-name: reveal-left;
+    }
+
+    .project-card:nth-child(even) {
+      animation-name: reveal-right;
+    }
+
+    .project-demo {
+      animation: wipe linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 70%;
+    }
+
+    .project-meta,
+    .project-card h3,
+    .project-card>p,
+    .store-links {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 30% entry 100%;
+    }
+
+    /* Contact */
+    .contact-bottom {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 20% entry 100%;
+    }
+
+    .contact-email {
+      animation: reveal-scale linear both;
+      animation-timeline: view();
+      animation-range: entry 40% entry 100%;
+    }
+
+    .site-footer {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
   }
 }
