@@ -1077,11 +1077,11 @@ career-entry {
 
   @keyframes pulse-ring {
     0% {
-      box-shadow: 0 0 0 0 rgb(87 169 111 / 45%);
+      box-shadow: 0 0 0 0 rgb(30 90 142 / 45%);
     }
 
     100% {
-      box-shadow: 0 0 0 10px rgb(87 169 111 / 0%);
+      box-shadow: 0 0 0 10px rgb(30 90 142 / 0%);
     }
   }
 
@@ -1193,7 +1193,7 @@ career-entry {
     width: min(46vw, 520px);
     aspect-ratio: 1;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, rgb(184 224 195 / 85%), rgb(184 224 195 / 0%) 70%);
+    background: radial-gradient(circle at 35% 35%, rgb(30 90 142 / 15%), rgb(30 90 142 / 0%) 70%);
     pointer-events: none;
     animation: float-orb 14s ease-in-out infinite;
   }
@@ -1208,7 +1208,7 @@ career-entry {
     content: "";
     position: absolute;
     inset: 0;
-    background: #57625a;
+    background: var(--accent);
     animation: drip 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
   }
 
@@ -1248,7 +1248,7 @@ career-entry {
 
   .career-card:hover {
     transform: translateY(-3px);
-    border-color: #b9c8b9;
+    border-color: var(--accent);
     box-shadow: 0 14px 30px rgb(24 32 29 / 8%);
   }
 
@@ -1257,7 +1257,7 @@ career-entry {
   }
 
   .career-item:hover::after {
-    background-color: #3f7554;
+    background-color: var(--accent);
   }
 
   .project-demo {
