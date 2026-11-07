@@ -629,7 +629,7 @@ career-entry {
 
 .work-section {
   padding-top: 123px;
-  background: var(--accent-light);
+  background: var(--white);
 }
 
 .work-heading>p {
@@ -755,7 +755,7 @@ career-entry {
   padding-top: 102px;
   padding-bottom: 95px;
   color: var(--white);
-  background: #0f1512;
+  background: #0a0e12;
 }
 
 .contact-inner>.section-label {
