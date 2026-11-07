@@ -6,7 +6,8 @@
   --muted: #727a74;
   --paper: #f5f3ef;
   --white: #fffefa;
-  --green: #b8e0c3;
+  --accent: #1e5a8e;
+  --accent-light: #e8f0f7;
   --line: #dcded7;
   --mono: "DM Mono", monospace;
   --sans: "DM Sans", sans-serif;
@@ -36,7 +37,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid #3f7554;
+  outline: 2px solid var(--accent);
   outline-offset: 5px;
 }
 
@@ -50,7 +51,7 @@ a:focus-visible {
   top: 0;
   z-index: 10;
   background: rgb(245 243 239 / 92%);
-  border-bottom: 1px solid rgb(24 32 29 / 7%);
+  border-bottom: 2px solid var(--ink);
   backdrop-filter: blur(16px);
 }
 
@@ -71,7 +72,7 @@ a:focus-visible {
   place-items: center;
   border-radius: 50%;
   background: var(--ink);
-  color: var(--green);
+  color: var(--white);
   font-size: 1rem;
   letter-spacing: -0.08em;
 }
@@ -90,13 +91,20 @@ a:focus-visible {
 
 .site-header nav a:hover,
 .site-footer a:hover {
-  color: #4a7859;
+  color: var(--accent);
 }
 
 .site-header nav .nav-contact {
   padding: 11px 16px;
-  border: 1px solid var(--ink);
+  border: none;
   border-radius: 3px;
+  background: var(--ink);
+  color: var(--white);
+  transition: opacity 160ms ease;
+}
+
+.site-header nav .nav-contact:hover {
+  opacity: 0.85;
 }
 
 .site-header .boxed-links {
@@ -125,7 +133,7 @@ a:focus-visible {
 .person-aside {
   font-family: var(--mono);
   font-size: 0.66rem;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -141,8 +149,8 @@ a:focus-visible {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #57a96f;
-  box-shadow: 0 0 0 4px rgb(87 169 111 / 13%);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgb(30 90 142 / 15%);
 }
 
 h1,
@@ -164,7 +172,7 @@ p {
 
 .hero h1 span,
 .intro-content h2 span {
-  color: #7e8c7d;
+  color: var(--accent);
 }
 
 .hero-intro {
@@ -179,9 +187,9 @@ p {
   align-items: center;
   gap: 12px;
   padding-bottom: 7px;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
   font-size: 0.83rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .text-link span {
@@ -213,7 +221,7 @@ p {
 
 .art-spark {
   position: absolute;
-  color: #91b49a;
+  color: var(--accent-light);
   font-size: 1.4rem;
 }
 
@@ -267,7 +275,8 @@ p {
 }
 
 .section-label>span {
-  color: #9caa9b;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .intro-content {
@@ -318,7 +327,7 @@ p {
 }
 
 .aboutme-facts strong span {
-  color: #78947c;
+  color: var(--accent);
 }
 
 .aboutme-facts div>span {
@@ -402,7 +411,7 @@ career-entry {
   height: 11px;
   border: 2px solid var(--paper);
   border-radius: 50%;
-  background: #78947c;
+  background: var(--accent);
 }
 
 .career-card {
@@ -411,6 +420,7 @@ career-entry {
   gap: 16px;
   padding: 16px 18px;
   border: 1px solid var(--line);
+  border-left: 3px solid var(--ink);
   border-radius: 14px;
   background: var(--white);
 }
@@ -452,7 +462,7 @@ career-entry {
 }
 
 .career-logo-fallback {
-  color: #78947c;
+  color: var(--accent);
   font-family: var(--display);
   font-size: 1.5rem;
   font-weight: 600;
@@ -525,7 +535,7 @@ career-entry {
 }
 
 .career-toggle:focus-visible {
-  outline: 2px solid #78947c;
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -550,7 +560,7 @@ career-entry {
   max-width: 700px;
   gap: 25px;
   background: var(--white);
-  border: 1px solid #e5e3dc;
+  border: 2px solid var(--ink);
 }
 
 .person-photo-container {
@@ -619,7 +629,7 @@ career-entry {
 
 .work-section {
   padding-top: 123px;
-  background: var(--white);
+  background: var(--accent-light);
 }
 
 .work-heading>p {
@@ -648,13 +658,13 @@ career-entry {
   position: relative;
   overflow: hidden;
   aspect-ratio: 1.6;
-  background: #e8f0f4;
+  background: var(--accent-light);
 }
 
 .project-demo {
   overflow: hidden;
   aspect-ratio: 1.6;
-  background: #e8f0f4;
+  background: var(--accent-light);
 }
 
 .project-demo video {
@@ -736,8 +746,8 @@ career-entry {
 
 .store-links a {
   font-size: 0.7rem;
-  font-weight: 600;
-  border-bottom: 1px solid #adb5ad;
+  font-weight: 700;
+  border-bottom: 2px solid var(--ink);
   padding-bottom: 4px;
 }
 
@@ -745,7 +755,7 @@ career-entry {
   padding-top: 102px;
   padding-bottom: 95px;
   color: var(--white);
-  background: #1b2821;
+  background: #0f1512;
 }
 
 .contact-inner>.section-label {
@@ -753,7 +763,7 @@ career-entry {
 }
 
 .contact-inner>.section-label>span {
-  color: #8aa992;
+  color: var(--accent);
 }
 
 .contact-inner h2 {
@@ -785,7 +795,7 @@ career-entry {
 }
 
 .contact-email span {
-  color: var(--green);
+  color: var(--accent);
 }
 
 .site-footer {
@@ -1163,7 +1173,7 @@ career-entry {
   }
 
   .hero h1 span {
-    background: linear-gradient(90deg, #7e8c7d 0%, #3f7554 25%, #7e8c7d 50%, #7e8c7d 100%);
+    background: linear-gradient(90deg, var(--accent) 0%, #1a4a75 25%, var(--accent) 50%, var(--accent) 100%);
     background-size: 200% 100%;
     padding: 0 0.12em 0.1em 0;
     -webkit-box-decoration-break: clone;
@@ -1296,7 +1306,7 @@ career-entry {
   }
 
   .contact-email:hover {
-    color: var(--green);
+    color: var(--accent);
   }
 
   .contact-email:hover span {
@@ -1420,7 +1430,7 @@ career-entry {
       bottom: 0;
       left: 0;
       height: 3px;
-      background: linear-gradient(90deg, #78947c, #3f7554);
+      background: linear-gradient(90deg, var(--accent), #1a4a75);
       transform-origin: left;
       animation: progress linear both;
       animation-timeline: scroll(root block);
