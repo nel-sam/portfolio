@@ -559,7 +559,6 @@ career-entry {
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  gap: 25px;
   background: var(--white);
   border: 2px solid var(--ink);
 }
@@ -1401,23 +1400,6 @@ career-entry {
       }
     }
 
-    @keyframes unclip {
-      from {
-        clip-path: inset(12% 12% 12% 12% round 14px);
-        opacity: 0.4;
-      }
-    }
-
-    @keyframes photo-parallax {
-      from {
-        transform: scale(1.18) translateY(-6%);
-      }
-
-      to {
-        transform: scale(1.18) translateY(6%);
-      }
-    }
-
     @keyframes slow-spin {
       to {
         transform: rotate(180deg);
@@ -1534,13 +1516,11 @@ career-entry {
     }
 
     .person-photo-container {
-      animation: unclip linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 80%;
     }
 
     .person-photo {
-      animation: photo-parallax linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
     }
